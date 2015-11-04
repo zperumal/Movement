@@ -16,11 +16,13 @@ class LogInViewController: UIViewController {
     let userAccount = "swiftLoginUser"
 
     override func viewDidAppear(animated: Bool) {
-        let dictionary = Locksmith.loadDataForUserAccount( userAccount ,inService: service)
-    
-        if  dictionary != nil && dictionary?.isEmpty == false{            // User is already logged in, Send them to already logged in view.
-            //self.performSegueWithIdentifier("logInViewSegue", sender: self)
-            print ("loggin in!")
+       
+        
+         let dictionary = Locksmith.loadDataForUserAccount( userAccount ,inService: service)
+        if  dictionary != nil && dictionary?.isEmpty == false && dictionary?.keys.contains("username") == true && dictionary?.keys.contains("password")  == true {
+            let username = dictionary!["username"] as! String
+            let password = dictionary!["password"] as! String
+            parseLogin(username, password : password)
 
         }
     }
@@ -58,33 +60,46 @@ class LogInViewController: UIViewController {
             
         } else {
             if savePasswordSwitch.on{
-                
-            }
-            // Run a spinner to show a task in progress
-            let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
-            spinner.startAnimating()
-            
-            // Send a request to login
-            PFUser.logInWithUsernameInBackground(username!, password: password!, block: { (user, error) -> Void in
-                
-                // Stop the spinner
-                spinner.stopAnimating()
-                
-                if ((user) != nil) {
-                    let alert = UIAlertView(title: "Success", message: "Logged In", delegate: self, cancelButtonTitle: "OK")
-                    alert.show()
+                do {
+                    try Locksmith.deleteDataForUserAccount(self.userAccount, inService: self.service )
+                    try Locksmith.saveData(["username": username! , "password" : password!], forUserAccount: self.userAccount, inService: self.service)
+                    //try Locksmith.updateData(["username": username! , "password" : password!], forUserAccount: self.userAccount, inService: self.service)
+                }catch _{
                     
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("toHome") as! UIViewController
-                        self.presentViewController(viewController, animated: true, completion: nil)
-                    })
-
-                    
-                } else {
-                    let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
-                    alert.show()
                 }
-            })
-        }
+            }
+            parseLogin(username!, password : password!)
+            
+    }
+    }
+    func parseLogin(username : String, password : String ){
+        // Run a spinner to show a task in progress
+        let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
+        spinner.startAnimating()
+        
+        // Send a request to login
+        PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
+            
+            // Stop the spinner
+            spinner.stopAnimating()
+            
+            if ((user) != nil) {
+                //let alert = UIAlertView(title: "Success", message: "Logged In", delegate: self, cancelButtonTitle: "OK")
+                //alert.show()
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    
+                    self.performSegueWithIdentifier("toHome", sender: self)
+                })
+                
+                
+            } else {
+                let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                alert.show()
+            }
+        })
     }
 }
+
+
+

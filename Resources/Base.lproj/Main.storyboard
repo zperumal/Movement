@@ -74,17 +74,17 @@
                         <outlet property="kerberos" destination="RAi-v4-8kc" id="C8z-IN-dOj"/>
                         <outlet property="password" destination="XfK-RU-8JO" id="3QS-IT-T72"/>
                         <outlet property="savePasswordSwitch" destination="zpa-JA-ogM" id="ttL-sh-mIa"/>
-                        <segue destination="fcp-Tj-JaO" kind="show" identifier="toHome" id="8Fb-Cy-RqM"/>
+                        <segue destination="fcp-Tj-JaO" kind="show" identifier="toHome" id="als-gK-n1g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="347" y="398"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="2ep-dY-xFc">
             <objects>
-                <viewController id="fcp-Tj-JaO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="fcp-Tj-JaO" customClass="HomeViewController" customModule="Movement" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iea-Va-Pdq"/>
                         <viewControllerLayoutGuide type="bottom" id="KWC-ay-Kks"/>
@@ -92,12 +92,52 @@
                     <view key="view" contentMode="scaleToFill" id="bQg-Gp-Z9q">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhU-po-jYc">
+                                <rect key="frame" x="270" y="182" width="60" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="O1t-Xx-cjk"/>
+                                    <constraint firstAttribute="width" constant="60" id="qp4-7c-B7Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNk-cA-sbb">
+                                <rect key="frame" x="264" y="255" width="72" height="30"/>
+                                <state key="normal" title="Send Data"/>
+                                <connections>
+                                    <action selector="sync" destination="fcp-Tj-JaO" eventType="touchUpInside" id="R7w-Vi-WpU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWv-n9-4Ct">
+                                <rect key="frame" x="256" y="218" width="89" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="A3C-iv-7oa"/>
+                                    <constraint firstAttribute="height" constant="21" id="fRz-RT-tde"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VhU-po-jYc" firstAttribute="centerX" secondItem="gWv-n9-4Ct" secondAttribute="centerX" id="5XQ-1x-lge"/>
+                            <constraint firstItem="VhU-po-jYc" firstAttribute="top" secondItem="iea-Va-Pdq" secondAttribute="bottom" constant="162" id="98Q-ph-Kuk"/>
+                            <constraint firstItem="yNk-cA-sbb" firstAttribute="centerX" secondItem="gWv-n9-4Ct" secondAttribute="centerX" id="DHo-8C-iDv"/>
+                            <constraint firstItem="gWv-n9-4Ct" firstAttribute="top" secondItem="VhU-po-jYc" secondAttribute="bottom" constant="15" id="SFa-zO-eaN"/>
+                            <constraint firstItem="yNk-cA-sbb" firstAttribute="top" secondItem="gWv-n9-4Ct" secondAttribute="bottom" constant="16" id="cKH-rw-wPs"/>
+                            <constraint firstItem="gWv-n9-4Ct" firstAttribute="centerX" secondItem="bQg-Gp-Z9q" secondAttribute="centerX" id="oIs-Ma-D4i"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="postLabel" destination="gWv-n9-4Ct" id="yAg-VW-FhY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5de-1o-fab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="390" y="1166"/>
+            <point key="canvasLocation" x="386" y="1171"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="S0V-4F-coa">
