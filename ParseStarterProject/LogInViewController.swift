@@ -11,6 +11,7 @@ import UIKit
 import Parse
 import Locksmith
 
+
 class LogInViewController: UIViewController {
     let service = "swiftLogin"
     let userAccount = "swiftLoginUser"
@@ -61,8 +62,8 @@ class LogInViewController: UIViewController {
         } else {
             if savePasswordSwitch.on{
                 do {
-                    try Locksmith.deleteDataForUserAccount(self.userAccount, inService: self.service )
-                    try Locksmith.saveData(["username": username! , "password" : password!], forUserAccount: self.userAccount, inService: self.service)
+                   // try Locksmith.deleteDataForUserAccount(self.userAccount, inService: self.service )
+                    try Locksmith.saveData(["username": username! , "password" : password!], forUserAccount: self.userAccount, inService: service)
                     //try Locksmith.updateData(["username": username! , "password" : password!], forUserAccount: self.userAccount, inService: self.service)
                 }catch _{
                     
