@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="204" id="UxO-9I-aGT" customClass="TextFieldQuestionTableViewCell" customModule="Movement" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UxO-9I-aGT" id="NtC-9y-auH">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozb-JG-oVa">
+                        <rect key="frame" x="8" y="161" width="49" height="30"/>
+                        <state key="normal" title="Submit"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miT-6u-hat">
+                        <rect key="frame" x="8" y="8" width="351" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="42H-XB-UBA"/>
+                            <constraint firstAttribute="height" constant="38" id="ThS-sU-FiT"/>
+                            <constraint firstAttribute="height" constant="25" id="s2Q-H6-cIo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="42H-XB-UBA"/>
+                                <exclude reference="s2Q-H6-cIo"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Tr-9C-pUM">
+                        <rect key="frame" x="8" y="54" width="351" height="108"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="UxO-9I-aGT" id="u12-Hi-dkP"/>
+                        </connections>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="miT-6u-hat" firstAttribute="top" secondItem="NtC-9y-auH" secondAttribute="topMargin" id="3lO-nl-JTX"/>
+                    <constraint firstItem="miT-6u-hat" firstAttribute="leading" secondItem="NtC-9y-auH" secondAttribute="leadingMargin" id="43L-w1-aXc"/>
+                    <constraint firstItem="miT-6u-hat" firstAttribute="centerX" secondItem="NtC-9y-auH" secondAttribute="centerX" constant="-4" id="PxM-sh-RoU"/>
+                    <constraint firstItem="miT-6u-hat" firstAttribute="trailing" secondItem="NtC-9y-auH" secondAttribute="trailingMargin" constant="-8" id="Xni-eR-1ok"/>
+                    <constraint firstItem="miT-6u-hat" firstAttribute="leading" secondItem="NtC-9y-auH" secondAttribute="leadingMargin" id="ptp-pX-R3A"/>
+                    <constraint firstItem="miT-6u-hat" firstAttribute="top" secondItem="NtC-9y-auH" secondAttribute="topMargin" id="qda-B9-KaV"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="3lO-nl-JTX"/>
+                        <exclude reference="43L-w1-aXc"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.96227031946182251" green="0.96224147081375122" blue="0.96225786209106445" alpha="1" colorSpace="calibratedRGB"/>
+            <accessibility key="accessibilityConfiguration" identifier="TextFieldQuestionTableViewCell"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="miT-6u-hat" secondAttribute="trailing" constant="8" id="EIe-xH-OPt"/>
+                <constraint firstItem="miT-6u-hat" firstAttribute="leading" secondItem="UxO-9I-aGT" secondAttribute="leading" constant="8" id="jr2-NJ-Dei"/>
+                <constraint firstItem="miT-6u-hat" firstAttribute="width" secondItem="UxO-9I-aGT" secondAttribute="width" constant="-16" id="ldo-JV-b6l"/>
+                <constraint firstItem="miT-6u-hat" firstAttribute="top" secondItem="UxO-9I-aGT" secondAttribute="top" constant="8" id="ws9-XS-4KV"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="EIe-xH-OPt"/>
+                    <exclude reference="jr2-NJ-Dei"/>
+                    <exclude reference="ldo-JV-b6l"/>
+                    <exclude reference="ws9-XS-4KV"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="answerField" destination="9Tr-9C-pUM" id="3LW-M3-A6K"/>
+                <outlet property="questionLabel" destination="miT-6u-hat" id="4Eh-L1-bum"/>
+                <outlet property="submitButton" destination="Ozb-JG-oVa" id="Guw-Em-Bu5"/>
+            </connections>
+            <point key="canvasLocation" x="76.5" y="145"/>
+        </tableViewCell>
+    </objects>
+</document>

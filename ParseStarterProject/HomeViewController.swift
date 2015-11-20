@@ -30,16 +30,27 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         
         view.addGestureRecognizer(tap)
         setPostLabel()
-        
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        if let date = PFUser.currentUser()!.valueForKey("syncedTo") {
+            let syncdate = date as! NSDate
+            
+            let calendar: NSCalendar = NSCalendar.currentCalendar()            //if NSDate().timeIntervalSinceDate(syncdate) <= 12 * 60 * 60 {
+            if( calendar.compareDate(NSDate(), toDate: syncdate, toUnitGranularity: NSCalendarUnit.Day) != .OrderedDescending ){
+                sendData.enabled = false
+            }else{
+                sendData.enabled = true
+            }
+        }
+        
     }
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
     @IBAction func sync(){
-        sendData.enabled = false
-        syncData()
+            sendData.enabled = false
+            syncData()
     }
     func syncData(){
         let hk = HealthKit()
@@ -87,6 +98,8 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
+        cell.backgroundView?.backgroundColor = UIColor.clearColor()
+        cell.backgroundView?.alpha = 0.8
         
         cell.textLabel?.text = namesandscores[indexPath.row]
         
@@ -124,7 +137,7 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
                     self.namesandscores += [name + "     " + String(post)]
                 }else{
                     
-                    self.namesandscores += [name ]
+                    self.namesandscores += [name]
                 }
                 
             }

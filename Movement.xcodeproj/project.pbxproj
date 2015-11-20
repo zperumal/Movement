@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5B4556BB051C19BA60EF9FED /* Pods_Movement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE7BD234569185B4C4456BB /* Pods_Movement.framework */; };
+		612C00711BF2B58900583AB2 /* sunset.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 612C00701BF2B58900583AB2 /* sunset.jpg */; };
+		612C00731BF3E18500583AB2 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612C00721BF3E18500583AB2 /* QuestionViewController.swift */; };
+		612C00751BF3E26400583AB2 /* TextFieldQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612C00741BF3E26400583AB2 /* TextFieldQuestionTableViewCell.xib */; };
+		612C00771BF3FA3900583AB2 /* ButtonQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612C00761BF3FA3900583AB2 /* ButtonQuestionTableViewCell.xib */; };
 		614375D91BEA5EBB0083500E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614375D81BEA5EBB0083500E /* HomeViewController.swift */; };
 		614375DB1BEA5EEF0083500E /* HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614375DA1BEA5EEF0083500E /* HealthKit.swift */; };
+		6150BCC91BF40BCF00471FE9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6150BCC81BF40BCF00471FE9 /* Question.swift */; };
+		6150BCCB1BF8DFCB00471FE9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6150BCCA1BF8DFCB00471FE9 /* Launch Screen.storyboard */; };
 		616FF32D1BE949B80057FD01 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616FF32C1BE949B80057FD01 /* HealthKit.framework */; };
 		616FF3301BE953A40057FD01 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FF32F1BE953A40057FD01 /* SignupViewController.swift */; };
 		619D96611BEA8BFA009CD08B /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619D965F1BEA8BFA009CD08B /* Fabric.framework */; };
@@ -29,8 +35,14 @@
 /* Begin PBXFileReference section */
 		2EE7BD234569185B4C4456BB /* Pods_Movement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36CEAB64AF37BD6F578DE7F0 /* Pods-Movement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movement/Pods-Movement.debug.xcconfig"; sourceTree = "<group>"; };
+		612C00701BF2B58900583AB2 /* sunset.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sunset.jpg; sourceTree = "<group>"; };
+		612C00721BF3E18500583AB2 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		612C00741BF3E26400583AB2 /* TextFieldQuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldQuestionTableViewCell.xib; sourceTree = "<group>"; };
+		612C00761BF3FA3900583AB2 /* ButtonQuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		614375D81BEA5EBB0083500E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		614375DA1BEA5EEF0083500E /* HealthKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKit.swift; sourceTree = "<group>"; };
+		6150BCC81BF40BCF00471FE9 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		6150BCCA1BF8DFCB00471FE9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		616FF32C1BE949B80057FD01 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		616FF32E1BE949B80057FD01 /* Movement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Movement.entitlements; sourceTree = "<group>"; };
 		616FF32F1BE953A40057FD01 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +99,9 @@
 		814C3AC51B69877600E307BB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				612C00701BF2B58900583AB2 /* sunset.jpg */,
 				814C3AC81B69877600E307BB /* Images.xcassets */,
+				6150BCCA1BF8DFCB00471FE9 /* Launch Screen.storyboard */,
 				814C3AC91B69877600E307BB /* Info.plist */,
 			);
 			path = Resources;
@@ -122,6 +136,10 @@
 				81BA814C1A49DA1800E65899 /* LogInViewController.swift */,
 				616FF32F1BE953A40057FD01 /* SignupViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				612C00741BF3E26400583AB2 /* TextFieldQuestionTableViewCell.xib */,
+				612C00761BF3FA3900583AB2 /* ButtonQuestionTableViewCell.xib */,
+				612C00721BF3E18500583AB2 /* QuestionViewController.swift */,
+				6150BCC81BF40BCF00471FE9 /* Question.swift */,
 				614375D81BEA5EBB0083500E /* HomeViewController.swift */,
 				614375DA1BEA5EEF0083500E /* HealthKit.swift */,
 			);
@@ -226,8 +244,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6150BCCB1BF8DFCB00471FE9 /* Launch Screen.storyboard in Resources */,
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
+				612C00771BF3FA3900583AB2 /* ButtonQuestionTableViewCell.xib in Resources */,
+				612C00751BF3E26400583AB2 /* TextFieldQuestionTableViewCell.xib in Resources */,
+				612C00711BF2B58900583AB2 /* sunset.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,8 +337,10 @@
 			files = (
 				616FF3301BE953A40057FD01 /* SignupViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* LogInViewController.swift in Sources */,
+				612C00731BF3E18500583AB2 /* QuestionViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 				614375D91BEA5EBB0083500E /* HomeViewController.swift in Sources */,
+				6150BCC91BF40BCF00471FE9 /* Question.swift in Sources */,
 				614375DB1BEA5EEF0083500E /* HealthKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +380,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;

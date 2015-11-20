@@ -26,10 +26,11 @@ class HealthKit
         if HKHealthStore.isHealthDataAvailable()
         {
             // We have to request each data type explicitly
-            let steps = NSSet(object: HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)!)
+            let readTypes = NSSet(objects: HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)! , HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDistanceWalkingRunning)!,HKQuantityType.quantityTypeForIdentifier(HKQuantityTypeIdentifierFlightsClimbed)!)
+            
             
             // Now we can request authorization for step count data
-            storage.requestAuthorizationToShareTypes(nil, readTypes: steps as? Set<HKObjectType>) { (success, error) -> Void in
+            storage.requestAuthorizationToShareTypes(nil, readTypes: readTypes as? Set<HKObjectType>) { (success, error) -> Void in
                 isEnabled = success
             }
         }
@@ -98,7 +99,9 @@ class HealthKit
     func syncAll(completion: ( NSError?) -> ()){
         
         // The type of data we are requesting (this is redundant and could probably be an enumeration
-        let type = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
+        let stepType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
+        let distanceType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDistanceWalkingRunning)
+        let flightsType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierFlightsClimbed)
         
         // Our search predicate which will fetch data from now until a day ago
         // (Note, 1.day comes from an extension
@@ -120,7 +123,7 @@ class HealthKit
                 let predicate = HKQuery.predicateForSamplesWithStartDate(startDate , endDate: endDate, options: .None)
                 
                 // The actual HealthKit Query which will fetch all of the steps and sub them up for us.
-                let query = HKSampleQuery(sampleType: type!, predicate: predicate, limit: 0, sortDescriptors: nil) { query, results, error in
+                let stepQuery = HKSampleQuery(sampleType: stepType!, predicate: predicate, limit: 0, sortDescriptors: nil) { stepQuery, results, error in
                     var steps: Double = 0
                     
                     if results?.count > 0
@@ -163,8 +166,100 @@ class HealthKit
                 }
                 
                 
-                storage.executeQuery(query)
+                storage.executeQuery(stepQuery)
+                
+                let distanceQuery = HKSampleQuery(sampleType: distanceType!, predicate: predicate, limit: 0, sortDescriptors: nil) { stepQuery, results, error in
+                    var distance: Double = 0
+                    
+                    if results?.count > 0
+                    {
+                        for result in results as! [HKQuantitySample]
+                        {
+                            /*
+                            
+                            */
+                            distance += result.quantity.doubleValueForUnit(HKUnit.mileUnit())
+                        }
+                    }
+                    
+                    
+                    completion( error)
+                    if distance > 0 {
+                        let stepRecord = PFObject(className:"Distance")
+                        stepRecord["sampleType"] = "Distance"
+                        stepRecord["startDate"] = startDate
+                        stepRecord["endDate"] = endDate
+                        stepRecord["quantity"] = distance
+                        stepRecord["User"] = PFUser.currentUser()
+                        stepRecord.saveInBackgroundWithBlock {
+                            (success: Bool, error: NSError?) -> Void in
+                            if (success) {
+                                print("Distance Record saved")
+                            } else {
+                                // There was a problem, check error.description
+                                print(error?.description)
+                                switch(error!.code){
+                                case 209:
+                                    sleep(1)
+                                    break
+                                default :
+                                    break
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                
+                storage.executeQuery(distanceQuery)
+                
+                let flightQuery = HKSampleQuery(sampleType: flightsType!, predicate: predicate, limit: 0, sortDescriptors: nil) { stepQuery, results, error in
+                    var flights: Double = 0
+                    
+                    if results?.count > 0
+                    {
+                        for result in results as! [HKQuantitySample]
+                        {
+                            /*
+                            
+                            */
+                            flights += result.quantity.doubleValueForUnit(HKUnit.countUnit())
+                        }
+                    }
+                    
+                    
+                    completion( error)
+                    if flights > 0 {
+                        let stepRecord = PFObject(className:"Flight")
+                        stepRecord["sampleType"] = "Flight"
+                        stepRecord["startDate"] = startDate
+                        stepRecord["endDate"] = endDate
+                        stepRecord["quantity"] = flights
+                        stepRecord["User"] = PFUser.currentUser()
+                        stepRecord.saveInBackgroundWithBlock {
+                            (success: Bool, error: NSError?) -> Void in
+                            if (success) {
+                                print("Flight Record saved")
+                            } else {
+                                // There was a problem, check error.description
+                                print(error?.description)
+                                switch(error!.code){
+                                case 209:
+                                    sleep(1)
+                                    break
+                                default :
+                                    break
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                
+                storage.executeQuery(flightQuery)
             }
+        
+        
         PFUser.currentUser()?.setValue(now, forKey: "sycnedTo")
       
 

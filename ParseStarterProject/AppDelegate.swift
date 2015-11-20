@@ -102,6 +102,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    func applicationDidBecomeActive(application: UIApplication) {
+        let currentInstallation : PFInstallation = PFInstallation.currentInstallation()
+        if currentInstallation != 0 {
+            currentInstallation.badge = 0
+            currentInstallation.saveEventually()
+        }
+    }
+    
     //--------------------------------------
     // MARK: Push Notifications
     //--------------------------------------
@@ -133,8 +141,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if application.applicationState == UIApplicationState.Inactive {
             PFAnalytics.trackAppOpenedWithRemoteNotificationPayload(userInfo)
         }
+        
+        
     }
 
+    
     ///////////////////////////////////////////////////////////
     // Uncomment this method if you want to use Push Notifications with Background App Refresh
     ///////////////////////////////////////////////////////////

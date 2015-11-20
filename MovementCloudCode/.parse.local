@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "HealthAnalysis": {
+      "applicationId": "mkoE28KQW26Pa8VW44CBmZ47KmYLRNN2qFkFlflm"
+    },
+    "_default": {
+      "link": "HealthAnalysis"
+    }
+  }
+}
