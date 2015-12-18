@@ -10,8 +10,11 @@
 import UIKit
 import Parse
 
+import Locksmith
 class SignupViewController: UIViewController {
     
+    let service = "swiftLogin"
+    let userAccount = "swiftLoginUser"
     @IBOutlet weak var kerberos: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confirmpassword: UITextField!
@@ -29,13 +32,14 @@ class SignupViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    /*
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "submitSignup"{
             return signUpAction()
         }
         return true
-    }
-    func signUpAction() -> Bool {
+    } */
+    @IBAction func signUpAction(sender: AnyObject) {
         
         let kerberosText = self.kerberos.text
         let passwordText = self.password.text
@@ -77,11 +81,59 @@ class SignupViewController: UIViewController {
                 } else {
                     let alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
+                    PFUser.logInWithUsernameInBackground(newUser.username! , password: newUser.password!, block: { (user, error) -> Void in
+                        
+                        // Stop the spinner
+                        spinner.stopAnimating()
+                        
+                        if ((user) != nil) {
+                            //let alert = UIAlertView(title: "Success", message: "Logged In", delegate: self, cancelButtonTitle: "OK")
+                            //alert.show()
+                            
+                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            
+                            self.performSegueWithIdentifier("submitSignup", sender: self)
+                            })
+                            
+
+                        } else {
+                            let alert = UIAlertView(title: "Error in login", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                            alert.show()
+                        }
+                    })
                     
                 }
+                
             })
-            return true;
         }
-        return false;
     }
+    /*
+    func parseLogin(username : String, password : String ){
+        // Run a spinner to show a task in progress
+        let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
+        spinner.startAnimating()
+        
+        // Send a request to login
+        PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
+            
+            // Stop the spinner
+            spinner.stopAnimating()
+            
+            if ((user) != nil) {
+                //let alert = UIAlertView(title: "Success", message: "Logged In", delegate: self, cancelButtonTitle: "OK")
+                //alert.show()
+                /*
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    
+                    self.performSegueWithIdentifier("toHome", sender: self)
+                })
+                
+                */
+            } else {
+                let alert = UIAlertView(title: "Error in login", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                alert.show()
+            }
+        })
+    }
+    */
 }

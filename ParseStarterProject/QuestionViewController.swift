@@ -15,6 +15,7 @@ class TextFieldQuestionTableViewCell : UITableViewCell, UITextViewDelegate {
     @IBOutlet var  questionLabel : UILabel!
     @IBOutlet var  answerField : UITextView!
     @IBOutlet var  submitButton : UIButton!
+    @IBOutlet weak var skipButton: UIButton!
     
     func loadItem( question: String, cell : Int) {
      questionLabel.text = question
@@ -22,6 +23,7 @@ class TextFieldQuestionTableViewCell : UITableViewCell, UITextViewDelegate {
         questionLabel.numberOfLines = 2
         questionLabel.sizeToFit()
         submitButton.tag = 99 + (100 * cell)
+        skipButton.tag = 99 + (100 * cell)
         //self.reloadInputViews()
         answerField.delegate = self
         answerField.text = placeholder
@@ -61,23 +63,25 @@ class ButtonQuestionTableViewCell : UITableViewCell {
     @IBOutlet var  button3 : UIButton!
     @IBOutlet var  button4 : UIButton!
     @IBOutlet var  button5 : UIButton!
-    @IBOutlet var  button6 : UIButton!
+    @IBOutlet var  skipButton : UIButton!
     
     func loadItem( question: String , buttonText : [String] , cell : Int) {
-        var buttons = [button1,button2,button3,button4,button5,button6]
+        var buttons = [button1,button2,button3,button4,button5,skipButton]
         questionLabel.text = question
         questionLabel.lineBreakMode =  NSLineBreakMode.ByWordWrapping
         questionLabel.numberOfLines = 2
-        questionLabel.sizeToFit()` ¸~√
+        questionLabel.sizeToFit()
         for i in 0...buttonText.count-1 {
             buttons[i].setTitle(buttonText[i], forState: UIControlState.Normal)
             buttons[i].tag = i + (100 * cell)
         }
-        for j in buttonText.count-1...buttons.count-1 {
-            buttons[j].removeFromSuperview()
-            buttons[j].hidden = false
+        for j in buttonText.count-1...buttons.count-2 { //don't hide skip button
+           // buttons[j].removeFromSuperview()
+            buttons[j].hidden = true
             buttons[j].enabled = false
         }
+        skipButton.enabled = true
+        skipButton.hidden = false
         self.reloadInputViews()
     }
     
@@ -113,7 +117,8 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         var q : Question = questions[indexPath.row]
         if (q.buttons.count == 0 ){
         var cell:TextFieldQuestionTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("TextFieldQuestionTableViewCell") as! TextFieldQuestionTableViewCell
-        cell.submitButton.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+            cell.submitButton.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+            cell.skipButton.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
         // this is how you extract values from a tuple
             cell.loadItem(q.questionText,cell: indexPath.row)
         
@@ -125,7 +130,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
             cell.button3.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
             cell.button4.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
             cell.button5.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-            cell.button6.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+            cell.skipButton.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
             cell.loadItem(q.questionText, buttonText: q.buttons , cell: indexPath.row )
             
             return cell
@@ -134,11 +139,20 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func buttonPressed( sender : UIButton) {
         var response = PFObject(className:"Response")
-        print ("hello world")
         var tag = sender.tag
         var buttonIndex : Int = tag%100
         var rowIndex : Int = (tag - buttonIndex) / 100
         
+        if sender.titleLabel?.text == "Skip" {
+            questions.removeAtIndex(rowIndex)
+            
+            tableView.reloadData()
+            if questions.count == 0{
+                //getQuestions()
+                questionsAnswererd(self)
+            }
+            return
+        }
         var question = questions[rowIndex]
          // question.questionText
         var responseText : String
@@ -152,6 +166,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         response["questionText"] = question.questionText
         response["responseText"] = responseText
+        response["user"] = PFUser.object()
         response.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {

@@ -55,12 +55,11 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     func syncData(){
         let hk = HealthKit()
         if hk.checkAuthorization(){
-            backgroundThread(0.0, background: {
+            syncBackgroundThread(0.0, background: {
                 hk.syncAll() { error in
                     //hk.lastDaysSteps() { error in
                     //  print(error)
-                    self.sendData.enabled = true
-                }
+                                   }
                 
             })
         
@@ -144,6 +143,7 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
           self.tableView.reloadData()
         }
         }
+      
     }
     
     func backgroundThread(delay: Double = 0.0, background: (() -> Void)? = nil, completion: (() -> Void)? = nil) {
@@ -156,9 +156,39 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
     }
+    func syncBackgroundThread(delay: Double = 0.0, background: (() -> Void)? = nil, completion: (() -> Void)? = nil) {
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
+            if(background != nil){ background!(); }
+            
+            let popTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC)))
+            dispatch_after(popTime, dispatch_get_main_queue()) {
+                if(completion != nil){ completion!(); }
+            }
+        }
+        if let date = PFUser.currentUser()!.valueForKey("syncedTo") {
+            let syncdate = date as! NSDate
+            
+            let calendar: NSCalendar = NSCalendar.currentCalendar()            //if NSDate().timeIntervalSinceDate(syncdate) <= 12 * 60 * 60 {
+            if( calendar.compareDate(NSDate(), toDate: syncdate, toUnitGranularity: NSCalendarUnit.Day) != .OrderedDescending ){
+                self.sendData.enabled = false
+            }else{
+                self.sendData.enabled = true
+            }
+        }
+        
+    }
     
     @IBAction func segmentedControllerChanged(sender: AnyObject) {
         getNamesAndScores()
+    }
+    func syncCompleted (){
+        let alertController = UIAlertController(title: "Sync completed", message:
+            "Thanks!", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        self.presentViewController(alertController, animated: true, completion:  {
+            
+        })
+
     }
 
 }

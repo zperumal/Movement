@@ -1,10 +1,13 @@
 PODS:
   - Locksmith (2.0.2)
+  - RateLimit (1.2.1)
 
 DEPENDENCIES:
   - Locksmith
+  - RateLimit
 
 SPEC CHECKSUMS:
   Locksmith: 7f2b68448449a7712348f9a4ed60604c1cc8dfa6
+  RateLimit: a9f79f45f4387b96e229b4f7ab8972c386570b57
 
 COCOAPODS: 0.39.0

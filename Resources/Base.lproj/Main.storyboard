@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -218,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5de-1o-fab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="386" y="1171"/>
+            <point key="canvasLocation" x="1296" y="1193"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="wef-BE-cKi">
@@ -267,9 +267,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDu-0L-5LY">
-                                <rect key="frame" x="26" y="15" width="34" height="30"/>
-                                <state key="normal" title="Back"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDu-0L-5LY">
+                                <rect key="frame" x="16" y="15" width="55" height="30"/>
+                                <state key="normal" title="toHome"/>
                                 <connections>
                                     <segue destination="fcp-Tj-JaO" kind="show" identifier="questionToHome" id="qf2-8f-GaM"/>
                                 </connections>
@@ -306,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSJ-tB-ARn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="1872"/>
+            <point key="canvasLocation" x="506" y="1127"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="S0V-4F-coa">
@@ -320,51 +320,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="sunset.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="da1-K5-XOb">
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunset.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="da1-K5-XOb">
                                 <rect key="frame" x="0.0" y="7" width="600" height="600"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="600" id="4jp-Hv-cnT"/>
-                                    <constraint firstAttribute="width" constant="600" id="rIZ-kP-yp1"/>
-                                </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZE-cW-yXF">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZE-cW-yXF">
                                 <rect key="frame" x="226" y="73" width="149" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vq4-8V-kMu">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vq4-8V-kMu">
                                 <rect key="frame" x="226" y="149" width="149" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ6-fA-hAE">
-                                <rect key="frame" x="326" y="547" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ6-fA-hAE">
+                                <rect key="frame" x="326" y="547" width="49" height="60"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="submitSignup" id="kp9-HV-Oap"/>
+                                    <action selector="signUpAction:" destination="ePT-H8-HJG" eventType="touchUpInside" id="HYe-tX-c4q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-cO-tg7">
-                                <rect key="frame" x="226" y="550" width="48" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktR-cO-tg7">
+                                <rect key="frame" x="226" y="550" width="48" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="TfN-al-Wte"/>
+                                </constraints>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="cancelSignup" id="R0A-6c-auQ"/>
-                                </connections>
                             </button>
-                            <textView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tU1-32-Kzn">
+                            <textView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" pagingEnabled="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tU1-32-Kzn">
                                 <rect key="frame" x="20" y="187" width="560" height="355"/>
-                                <mutableString key="text">By signing up to participate in the MIT Movement Project, you agree to the following:
+                                <string key="text">By signing up to participate in the MIT Movement Project, you agree to the following:
 1. Data from the Health app of your phone may be pushed to the investigators for use in analysis of MIT health trends. This data will not be linked to you and will not be identifiable to the investigators.
 2. Aggregated Health data may be released to the public in the form of data visualizations. This data will be aggregated with many participants and will not act as an identifier for any individual participant.
-3. All other categories covered in the Consent to Participate in Non-Biomedical Research form (which you previously signed) may also apply.</mutableString>
+3. All other categories covered in the Consent to Participate in Non-Biomedical Research form (which you previously signed) may also apply.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RFS-lk-TDp">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RFS-lk-TDp">
                                 <rect key="frame" x="226" y="111" width="149" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -372,40 +368,33 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Vq4-8V-kMu" firstAttribute="top" secondItem="ZZE-cW-yXF" secondAttribute="bottom" constant="46" id="52K-Cy-U8i"/>
-                            <constraint firstItem="ktR-cO-tg7" firstAttribute="top" secondItem="tU1-32-Kzn" secondAttribute="bottom" constant="8" id="5T2-bL-dUo"/>
-                            <constraint firstItem="Vq4-8V-kMu" firstAttribute="top" secondItem="RFS-lk-TDp" secondAttribute="bottom" constant="8" id="6sv-Xb-RJM"/>
-                            <constraint firstItem="tU1-32-Kzn" firstAttribute="trailing" secondItem="da1-K5-XOb" secondAttribute="trailing" id="7Oq-Kc-zJv"/>
+                            <constraint firstItem="tU1-32-Kzn" firstAttribute="centerX" secondItem="Vq4-8V-kMu" secondAttribute="centerX" id="1dg-Ba-vFB"/>
+                            <constraint firstItem="ktR-cO-tg7" firstAttribute="leading" secondItem="Vq4-8V-kMu" secondAttribute="leading" id="2x7-SX-Nh9"/>
+                            <constraint firstItem="Vq4-8V-kMu" firstAttribute="top" secondItem="RFS-lk-TDp" secondAttribute="bottom" constant="8" symbolic="YES" id="8RQ-uL-cU0"/>
+                            <constraint firstItem="RFS-lk-TDp" firstAttribute="top" secondItem="ZZE-cW-yXF" secondAttribute="bottom" constant="8" symbolic="YES" id="Abn-RW-OC7"/>
                             <constraint firstItem="tU1-32-Kzn" firstAttribute="leading" secondItem="90y-vy-PY0" secondAttribute="leadingMargin" id="C56-09-yNg"/>
-                            <constraint firstItem="kZ6-fA-hAE" firstAttribute="centerY" secondItem="ktR-cO-tg7" secondAttribute="centerY" id="FYq-xd-Y8L"/>
-                            <constraint firstItem="kZ6-fA-hAE" firstAttribute="bottom" secondItem="da1-K5-XOb" secondAttribute="bottom" id="Fcq-G6-3lN"/>
-                            <constraint firstItem="ZZE-cW-yXF" firstAttribute="centerX" secondItem="90y-vy-PY0" secondAttribute="centerX" id="HZf-5C-gbz"/>
-                            <constraint firstItem="da1-K5-XOb" firstAttribute="centerY" secondItem="90y-vy-PY0" secondAttribute="centerY" id="HlM-Np-kvb"/>
-                            <constraint firstItem="da1-K5-XOb" firstAttribute="centerX" secondItem="90y-vy-PY0" secondAttribute="centerX" id="N7u-WJ-yvR"/>
+                            <constraint firstItem="ZZE-cW-yXF" firstAttribute="trailing" secondItem="RFS-lk-TDp" secondAttribute="trailing" id="CGW-So-bxA"/>
+                            <constraint firstItem="da1-K5-XOb" firstAttribute="top" secondItem="90y-vy-PY0" secondAttribute="topMargin" constant="7" id="E3W-RU-N6Y"/>
+                            <constraint firstItem="Vq4-8V-kMu" firstAttribute="trailing" secondItem="RFS-lk-TDp" secondAttribute="trailing" id="FA5-fP-LM9"/>
+                            <constraint firstAttribute="trailing" secondItem="da1-K5-XOb" secondAttribute="trailing" id="Mjd-66-wDq"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ktR-cO-tg7" secondAttribute="bottom" constant="-7" id="NKW-px-bwV"/>
+                            <constraint firstItem="RFS-lk-TDp" firstAttribute="leading" secondItem="Vq4-8V-kMu" secondAttribute="leading" id="NSr-u9-Jdc"/>
+                            <constraint firstItem="kZ6-fA-hAE" firstAttribute="top" secondItem="tU1-32-Kzn" secondAttribute="bottom" constant="5" id="NgE-wm-nlR"/>
                             <constraint firstItem="tU1-32-Kzn" firstAttribute="centerX" secondItem="Vq4-8V-kMu" secondAttribute="centerX" id="Ojl-SR-4zg"/>
-                            <constraint firstItem="da1-K5-XOb" firstAttribute="top" secondItem="ZZE-cW-yXF" secondAttribute="bottom" constant="-96" id="RZw-gI-a3v"/>
-                            <constraint firstItem="ktR-cO-tg7" firstAttribute="top" secondItem="da1-K5-XOb" secondAttribute="bottom" constant="-57" id="UBQ-H1-S2e"/>
-                            <constraint firstItem="ktR-cO-tg7" firstAttribute="baseline" secondItem="kZ6-fA-hAE" secondAttribute="baseline" constant="3" id="XAu-tY-R1p"/>
-                            <constraint firstItem="kZ6-fA-hAE" firstAttribute="top" secondItem="tU1-32-Kzn" secondAttribute="bottom" constant="5" id="YNH-uy-dkr"/>
-                            <constraint firstItem="tU1-32-Kzn" firstAttribute="top" secondItem="Vq4-8V-kMu" secondAttribute="bottom" constant="8" id="aph-Yr-nnS"/>
-                            <constraint firstItem="Vq4-8V-kMu" firstAttribute="trailing" secondItem="ZZE-cW-yXF" secondAttribute="trailing" id="bax-RI-saH"/>
-                            <constraint firstItem="da1-K5-XOb" firstAttribute="width" secondItem="90y-vy-PY0" secondAttribute="width" id="bjx-0B-hMZ"/>
-                            <constraint firstItem="kZ6-fA-hAE" firstAttribute="leading" secondItem="ktR-cO-tg7" secondAttribute="trailing" constant="52" id="dcq-db-Ue3"/>
-                            <constraint firstItem="da1-K5-XOb" firstAttribute="height" secondItem="90y-vy-PY0" secondAttribute="height" id="dhN-nH-HTC"/>
-                            <constraint firstItem="ZZE-cW-yXF" firstAttribute="top" secondItem="kDz-yj-vjZ" secondAttribute="bottom" constant="53" id="hHg-gb-zDU"/>
-                            <constraint firstItem="RFS-lk-TDp" firstAttribute="top" secondItem="ZZE-cW-yXF" secondAttribute="bottom" constant="8" id="lCX-BC-APm"/>
-                            <constraint firstItem="RFS-lk-TDp" firstAttribute="top" secondItem="ZZE-cW-yXF" secondAttribute="bottom" constant="8" id="mu4-3J-jUL"/>
+                            <constraint firstItem="tU1-32-Kzn" firstAttribute="leading" secondItem="90y-vy-PY0" secondAttribute="leadingMargin" id="PoN-Oe-MyL"/>
+                            <constraint firstItem="ktR-cO-tg7" firstAttribute="bottom" secondItem="kZ6-fA-hAE" secondAttribute="bottom" id="PqF-A2-9V2"/>
+                            <constraint firstItem="tU1-32-Kzn" firstAttribute="top" secondItem="Vq4-8V-kMu" secondAttribute="bottom" constant="8" symbolic="YES" id="Qqo-QZ-9KR"/>
+                            <constraint firstItem="ktR-cO-tg7" firstAttribute="top" secondItem="tU1-32-Kzn" secondAttribute="bottom" constant="8" symbolic="YES" id="eao-1n-eFB"/>
+                            <constraint firstItem="Vq4-8V-kMu" firstAttribute="trailing" secondItem="kZ6-fA-hAE" secondAttribute="trailing" id="fBT-YQ-6h5"/>
+                            <constraint firstItem="kZ6-fA-hAE" firstAttribute="leading" secondItem="ktR-cO-tg7" secondAttribute="trailing" constant="52" id="h89-3i-1Vi"/>
+                            <constraint firstItem="da1-K5-XOb" firstAttribute="centerX" secondItem="tU1-32-Kzn" secondAttribute="centerX" id="hZR-Xk-zo8"/>
+                            <constraint firstItem="ZZE-cW-yXF" firstAttribute="leading" secondItem="RFS-lk-TDp" secondAttribute="leading" id="lNe-ov-bcH"/>
                             <constraint firstItem="kZ6-fA-hAE" firstAttribute="top" secondItem="tU1-32-Kzn" secondAttribute="bottom" constant="5" id="n3W-bT-F7t"/>
-                            <constraint firstItem="tU1-32-Kzn" firstAttribute="leading" secondItem="da1-K5-XOb" secondAttribute="leading" id="oU8-Q5-H3T"/>
                             <constraint firstItem="tU1-32-Kzn" firstAttribute="top" secondItem="Vq4-8V-kMu" secondAttribute="bottom" constant="8" symbolic="YES" id="pBR-wL-9Lm"/>
-                            <constraint firstItem="RFS-lk-TDp" firstAttribute="leading" secondItem="ktR-cO-tg7" secondAttribute="leading" id="pMD-Yi-cR2"/>
-                            <constraint firstItem="ZZE-cW-yXF" firstAttribute="leading" secondItem="Vq4-8V-kMu" secondAttribute="leading" id="pwt-Q7-b9E"/>
                             <constraint firstItem="ktR-cO-tg7" firstAttribute="top" secondItem="tU1-32-Kzn" secondAttribute="bottom" constant="8" symbolic="YES" id="qXY-Li-X9G"/>
-                            <constraint firstItem="RFS-lk-TDp" firstAttribute="trailing" secondItem="Vq4-8V-kMu" secondAttribute="trailing" id="qc0-Ya-SWB"/>
-                            <constraint firstItem="RFS-lk-TDp" firstAttribute="top" secondItem="Vq4-8V-kMu" secondAttribute="bottom" constant="-68" id="uCt-xC-rYw"/>
-                            <constraint firstItem="ktR-cO-tg7" firstAttribute="top" secondItem="RFS-lk-TDp" secondAttribute="bottom" constant="409" id="uOK-Lv-QHl"/>
-                            <constraint firstItem="Vq4-8V-kMu" firstAttribute="leading" secondItem="RFS-lk-TDp" secondAttribute="leading" id="wlD-TY-CO3"/>
-                            <constraint firstItem="kZ6-fA-hAE" firstAttribute="trailing" secondItem="RFS-lk-TDp" secondAttribute="trailing" id="yVw-ky-VfJ"/>
+                            <constraint firstItem="da1-K5-XOb" firstAttribute="leading" secondItem="90y-vy-PY0" secondAttribute="leading" id="r0B-oT-EZA"/>
+                            <constraint firstItem="kZ6-fA-hAE" firstAttribute="bottom" secondItem="da1-K5-XOb" secondAttribute="bottom" id="rj4-Sl-7UD"/>
+                            <constraint firstItem="ZZE-cW-yXF" firstAttribute="top" secondItem="kDz-yj-vjZ" secondAttribute="bottom" constant="53" id="sb3-X0-vv0"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -421,6 +410,7 @@
                         <outlet property="confirmpassword" destination="RFS-lk-TDp" id="yur-c3-l7b"/>
                         <outlet property="kerberos" destination="ZZE-cW-yXF" id="0R4-C8-t1I"/>
                         <outlet property="password" destination="Vq4-8V-kMu" id="yrk-eH-XYf"/>
+                        <segue destination="g1t-A3-sKM" kind="show" identifier="submitSignup" id="HZw-Y0-MbC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYh-p9-V3o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -432,7 +422,7 @@
         <image name="sunset.jpg" width="2048" height="1152"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="HZw-Y0-MbC"/>
         <segue reference="qf2-8f-GaM"/>
-        <segue reference="kp9-HV-Oap"/>
     </inferredMetricsTieBreakers>
 </document>
