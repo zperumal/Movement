@@ -21,6 +21,9 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confirmpassword: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    
+    let healthkitManager = HealthKitManager()
+    let parseManager = ParseManager()
     var namesandscores :[String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,21 +56,42 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
             syncData()
     }
     func syncData(){
-        let hk = HealthKit()
-        if hk.checkAuthorization(){
-            syncBackgroundThread(0.0, background: {
-                hk.syncAll() { error in
-                    //hk.lastDaysSteps() { error in
-                    //  print(error)
-                                   }
-                
-            })
-        
+        healthkitManager.authorizeHealthKit { (authorized,  error) -> Void in
+            if authorized {
+                print("HealthKit authorization received.")
+                self.syncBackgroundThread(0.0, background: {
+                    self.healthkitManager.fillRecords() { error in
+                        if error != nil {
+                            print("\(error)")
+                        }else {
+                            let records = self.healthkitManager.getRecords()
+                            self.parseManager.parseRecords(records)
+                            print(records.count)
+                            
+                            PFUser.currentUser()?.setValue(NSDate(), forKey: "sycnedTo")
+                            self.syncCompleted()
+                            
+                            
+                        }
+                    }
+                    
+                })
+            }
+            else
+            {
+                print("HealthKit authorization denied!")
+                if error != nil {
+                    print("\(error)")
+                }
+            }
         }
+        
+        
         PFUser.currentUser()!.incrementKey("posts" )
         setPostLabel()
         getNamesAndScores()
     }
+    
     func setPostLabel(){
         
         if let posts = PFUser.currentUser()!.valueForKey("posts") {

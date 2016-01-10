@@ -13,7 +13,8 @@ class HealthKit : NSObject
 {
     let storage = HKHealthStore()
     
-    var objects = [PFObject]()
+    //var objects = [PFObject]()
+    var records = [healthRecord]()
     var stop = false
     var stepIndex = 0
     var distanceIndex = 0
@@ -145,7 +146,7 @@ class HealthKit : NSObject
         
         let predicate = HKQuery.predicateForSamplesWithStartDate(startDate , endDate: endDate, options: .None)
         
-        // The actual HealthKit Query which will fetch all of the steps and sub them up for us.
+        // The actual HealthKit Query which will fetch all of the steps and sum them up for us.
         let query = HKSampleQuery(sampleType: type, predicate: predicate, limit: 0, sortDescriptors: nil) { query, results, error in
             var count: Double = 0
             
@@ -163,16 +164,54 @@ class HealthKit : NSObject
             
             completion( error)
             if count > 0 {
-                let record = PFObject(className:className)
+                /*let record = PFObject(className:className)
                 record["sampleType"] = className
                 record["startDate"] = startDate
                 record["endDate"] = endDate
                 record["quantity"] = count
                 record["User"] = PFUser.currentUser()
-                self.objects += [record]
+                */
+                healthRecord(sampleType: className, startDate: startDate, endDate: endDate, quantity: count, user: PFUser.currentUser()!)
+                self.records += [healthRecord(sampleType: className, startDate: startDate, endDate: endDate, quantity: count, user: PFUser.currentUser()!)]
             }
         }
         storage.executeQuery(query)
+    }
+    func getRecords() -> [healthRecord] {
+        return records
+    }
+    struct healthRecord {
+        var sampleType = String();
+        var startDate = NSDate();
+        var endDate = NSDate();
+        var quantity = Double();
+        var user = PFUser();
+    
+    }
+    func fillObjects(completion: ( NSError?) -> ()){
+        let syncedTo  = PFUser.currentUser()!.valueForKey("syncedTo")
+        let now = getDateHourRoudnedDown(NSDate())
+        var beginning : NSDate
+        if syncedTo == nil {
+            beginning = NSDate(dateString:"2015-08-01")
+            //beginning = now.dateByAddingTimeInterval(NSTimeInterval(-3600 * 24 * 7 * 4 * 3))
+        }else{
+            beginning = syncedTo as! NSDate
+        }
+        let hoursback = hoursBack(now,past:  beginning)
+        for i in 0 ... hoursback {
+            
+            let startDate = getDateRoundedPlusHours(now ,hours:  0 - i)
+            let endDate = getDateRoundedPlusHours(now, hours: 1-i)
+            fillArray(startDate!, endDate: endDate!, recordType: RecordType.Step, completion : completion)
+            fillArray(startDate!, endDate: endDate!, recordType: RecordType.Distance, completion : completion)
+            fillArray(startDate!, endDate: endDate!, recordType: RecordType.Flight, completion : completion)
+            
+        }
+        
+        
+        
+        inSync = false
     }
     func syncAll(completion: ( NSError?) -> ()){
       //  autoreleasepool({ () -> () in
@@ -181,10 +220,12 @@ class HealthKit : NSObject
        // let stepType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
        // let distanceType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDistanceWalkingRunning)
        // let flightsType = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierFlightsClimbed)
-        backgroundThread(0.0, background: {
+       
+        /*backgroundThread(0.0, background: {
                self.startEmptyArraysWhenAvailable()
                 
-        })
+        }) */
+        
         // Our search predicate which will fetch data from now until a day ago
         // (Note, 1.day comes from an extension
         // You'll want to change that to your own NSDate
@@ -214,6 +255,7 @@ class HealthKit : NSObject
    // })
     
     }
+    /*
     func updateTimer(timer: NSTimer) {
         print ("hello")
     }
@@ -234,6 +276,7 @@ class HealthKit : NSObject
             }
         }
     }
+    */
     /*
     func emptyArrays(){
         PFUser.currentUser()?.setValue(true, forKey: "inSync")

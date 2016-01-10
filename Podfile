@@ -7,5 +7,6 @@ xcodeproj 'Movement.xcodeproj'
 target 'Movement' do
   pod 'Locksmith'
   pod 'RateLimit'
+  pod 'ObjectMapper', '~> 1.0'
 end
 
