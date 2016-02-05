@@ -1,0 +1,180 @@
+I2016-02-01T18:13:24.731Z]Distance
+I2016-02-01T18:13:24.732Z]Distance
+I2016-02-01T18:13:24.733Z]Distance
+I2016-02-01T18:13:24.734Z]Distance
+I2016-02-01T18:13:24.735Z]Distance
+I2016-02-01T18:13:24.736Z]Distance
+I2016-02-01T18:13:24.737Z]Distance
+I2016-02-01T18:13:24.738Z]Distance
+I2016-02-01T18:13:24.739Z]Distance
+I2016-02-01T18:13:24.740Z]Distance
+I2016-02-01T18:13:24.741Z]Distance
+I2016-02-01T18:13:24.742Z]Distance
+I2016-02-01T18:13:24.743Z]Distance
+I2016-02-01T18:13:24.744Z]Distance
+I2016-02-01T18:13:24.745Z]Distance
+I2016-02-01T18:13:24.746Z]Distance
+I2016-02-01T18:13:24.747Z]Distance
+I2016-02-01T18:13:24.748Z]Distance
+I2016-02-01T18:13:24.749Z]Distance
+I2016-02-01T18:13:24.750Z]Distance
+I2016-02-01T18:13:24.751Z]Distance
+I2016-02-01T18:13:24.752Z]Distance
+I2016-02-01T18:13:24.753Z]Distance
+I2016-02-01T18:13:24.754Z]Distance
+I2016-02-01T18:13:24.755Z]Distance
+I2016-02-01T18:13:24.756Z]Distance
+I2016-02-01T18:13:24.757Z]Distance
+I2016-02-01T18:13:24.758Z]Distance
+I2016-02-01T18:13:24.759Z]Distance
+I2016-02-01T18:13:24.760Z]Distance
+I2016-02-01T18:13:24.761Z]Distance
+I2016-02-01T18:13:24.762Z]Distance
+I2016-02-01T18:13:24.763Z]Distance
+I2016-02-01T18:13:24.764Z]Distance
+I2016-02-01T18:13:24.765Z]Distance
+I2016-02-01T18:13:24.766Z]Distance
+I2016-02-01T18:13:24.767Z]Distance
+I2016-02-01T18:13:24.768Z]Distance
+I2016-02-01T18:13:24.769Z]Distance
+I2016-02-01T18:13:24.770Z]Distance
+I2016-02-01T18:13:24.771Z]Distance
+I2016-02-01T18:13:24.772Z]Distance
+I2016-02-01T18:13:24.773Z]Distance
+I2016-02-01T18:13:24.774Z]Distance
+I2016-02-01T18:13:24.775Z]Distance
+I2016-02-01T18:13:24.776Z]Distance
+I2016-02-01T18:13:24.777Z]Distance
+I2016-02-01T18:13:24.778Z]Distance
+I2016-02-01T18:13:24.779Z]Distance
+I2016-02-01T18:13:24.780Z]Distance
+I2016-02-01T18:13:24.781Z]Distance
+I2016-02-01T18:13:24.782Z]Distance
+I2016-02-01T18:13:24.783Z]Distance
+I2016-02-01T18:13:24.784Z]Distance
+I2016-02-01T18:13:24.785Z]Distance
+I2016-02-01T18:13:24.786Z]Distance
+I2016-02-01T18:13:24.787Z]Distance
+I2016-02-01T18:13:24.788Z]Distance
+I2016-02-01T18:13:24.789Z]Distance
+I2016-02-01T18:13:24.790Z]Distance
+I2016-02-01T18:13:24.791Z]Distance
+I2016-02-01T18:13:24.792Z]Distance
+I2016-02-01T18:13:24.793Z]Distance
+I2016-02-01T18:13:24.794Z]Distance
+I2016-02-01T18:13:24.795Z]Distance
+I2016-02-01T18:13:24.796Z]Distance
+I2016-02-01T18:13:24.797Z]Distance
+I2016-02-01T18:13:24.798Z]Distance
+I2016-02-01T18:13:24.799Z]Distance
+I2016-02-01T18:13:24.800Z]Distance
+I2016-02-01T18:13:24.801Z]Distance
+I2016-02-01T18:13:24.802Z]Distance
+I2016-02-01T18:13:24.803Z]Distance
+I2016-02-01T18:13:24.804Z]Distance
+I2016-02-01T18:13:24.805Z]Distance
+I2016-02-01T18:13:24.806Z]Distance
+I2016-02-01T18:13:24.807Z]Distance
+I2016-02-01T18:13:24.808Z]Distance
+I2016-02-01T18:13:24.809Z]Distance
+I2016-02-01T18:13:24.810Z]Distance
+I2016-02-01T18:13:24.811Z]Distance
+I2016-02-01T18:13:24.812Z]Distance
+I2016-02-01T18:13:24.813Z]Reached max log messages per request, later messages for this request are truncated.
+I2016-02-01T18:16:31.188Z]Deployed v188 with triggers:
+  Distance:
+    before_save
+  Flight:
+    before_save
+  Step:
+    before_save
+  User:
+    before_save
+  Cloud Functions:
+    getLeaderboard
+    getStepLeaderboard
+    hello
+  Jobs:
+    handleTempObjects
+    jobUpdateStepLeaderboard
+    notifications
+
+E2016-02-01T18:16:48.525Z]v188 Ran job handleTempObjects with:
+  Input: {}
+  Result: success/error was not called
+I2016-02-01T18:16:48.576Z]here
+I2016-02-01T18:16:49.080Z]7580
+I2016-02-01T18:18:12.829Z]Deployed v189 with triggers:
+  Flight:
+    before_save
+  Step:
+    before_save
+  User:
+    before_save
+  Distance:
+    before_save
+  Cloud Functions:
+    getLeaderboard
+    getStepLeaderboard
+    hello
+  Jobs:
+    handleTempObjects
+    jobUpdateStepLeaderboard
+    notifications
+
+E2016-02-01T18:18:18.562Z]v189 Ran job handleTempObjects with:
+  Input: {}
+  Result: success/error was not called
+I2016-02-01T18:18:18.586Z]here
+I2016-02-01T18:18:18.639Z]0
+I2016-02-01T18:18:18.969Z]7580
+I2016-02-01T18:20:57.607Z]Deployed v190 with triggers:
+  User:
+    before_save
+  Distance:
+    before_save
+  Flight:
+    before_save
+  Step:
+    before_save
+  Cloud Functions:
+    getLeaderboard
+    getStepLeaderboard
+    hello
+  Jobs:
+    handleTempObjects
+    jobUpdateStepLeaderboard
+    notifications
+
+E2016-02-01T18:21:08.340Z]v190 Ran job handleTempObjects with:
+  Input: {}
+  Result: TypeError: Cannot call method 'set' of undefined
+    at e.<anonymous> (main.js:289:14)
+    at e.i (Parse.js:14:27703)
+    at e.a.value (Parse.js:14:27063)
+    at Object.<anonymous> (<anonymous>:846:17)
+I2016-02-01T18:21:08.361Z]here
+I2016-02-01T18:21:08.415Z]0
+I2016-02-01T18:21:08.919Z]7580
+I2016-02-01T18:22:06.195Z]Deployed v191 with triggers:
+  User:
+    before_save
+  Distance:
+    before_save
+  Flight:
+    before_save
+  Step:
+    before_save
+  Cloud Functions:
+    getLeaderboard
+    getStepLeaderboard
+    hello
+  Jobs:
+    handleTempObjects
+    jobUpdateStepLeaderboard
+    notifications
+
+E2016-02-01T18:22:13.674Z]v191 Ran job handleTempObjects with:
+  Input: {}
+  Result: success/error was not called
+I2016-02-01T18:22:13.971Z]7580
