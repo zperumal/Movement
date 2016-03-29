@@ -1,13 +1,16 @@
 PODS:
   - Locksmith (2.0.2)
+  - ObjectMapper (1.0.1)
   - RateLimit (1.2.1)
 
 DEPENDENCIES:
   - Locksmith
+  - ObjectMapper (~> 1.0)
   - RateLimit
 
 SPEC CHECKSUMS:
   Locksmith: 7f2b68448449a7712348f9a4ed60604c1cc8dfa6
+  ObjectMapper: 98524bac0dca46c6b3d5ee02cd410fc700ec6ce2
   RateLimit: a9f79f45f4387b96e229b4f7ab8972c386570b57
 
 COCOAPODS: 0.39.0

@@ -7,102 +7,145 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10113E207516DDCAC19E3B2FED7E12C4 /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB64F05FDE2A1AEE3E51A51EE08FDCB /* LocksmithError.swift */; };
-		13EB929F72B356FC41F08CCF85D5D0C1 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DD13D36D25D9779A5A86A50FD1C86C2 /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1495BCB330D338CEF2E39D10082B941C /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7DBEC005EF011EB7DAF0931FF28AD /* LocksmithAccessibleOption.swift */; };
-		1D311136A90349720FCAAEA30202DF41 /* RateLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18E2154A9CC93E0570B81184E26E84C /* RateLimit.swift */; };
-		3B629068F4BE1D7821957056F25E33C1 /* Locksmith-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E330FB32F61C63F13E15BCDA828323E /* Locksmith-dummy.m */; };
-		46485D36E37F397B7F56EE76B3382C85 /* Dictionary_Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68165E265D3AD5771EFF343E2D440B71 /* Dictionary_Initializers.swift */; };
-		5C0F5A51A92347D11BD97C7236B939D6 /* RateLimit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1885693C61C391642B08F8D2D58D70FD /* RateLimit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5C9BDDBB790ACE3711E8AD09A13E0FB2 /* LocksmithSecurityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7D364313BA8D80E358E276635E48F1 /* LocksmithSecurityClass.swift */; };
-		612A5931CEEFDFA056FE645BDD784469 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = B265C0293FB5DAF208574520CBC3EA20 /* Locksmith.swift */; };
-		6752D2B751C9400BF9DAD352F36F3E01 /* RateLimit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DBF28D5AE840BA3814CC82B85C1756A /* RateLimit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		73B2289B89B0F920ACF468489D8A5D9E /* RateLimit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65813E12BD36F27DB5CB18C81FF5F415 /* RateLimit-dummy.m */; };
-		765560F1B832789694557F2439E07F35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
-		AA0B9C265F96CA310C674C330D4C5592 /* Locksmith.h in Headers */ = {isa = PBXBuildFile; fileRef = 67D34192238B6BC8715CC1577012F4FC /* Locksmith.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3EF96986ADE1719524F65F3357AC007 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
-		B94D60E77398ABBEDE7836BBCA600475 /* Pods-Movement-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF5D91012A303BDCF268D7907DDF5D5 /* Pods-Movement-dummy.m */; };
-		BD736685B76BC0C7AEA95DB3CEF75130 /* Pods-Movement-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5351435EA7C06BF9B8EAA82FBEBB52CE /* Pods-Movement-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC2443BEF39BB4254C340BAA445BCBD5 /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6CB88AEBD40E835EDDACA5BE064D43 /* LocksmithInternetAuthenticationType.swift */; };
-		D234B23ACC5F69B9BE581EC70C15F8DE /* LocksmithInternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15EF5C6485F906BBFC1C8930884A1A6 /* LocksmithInternetProtocol.swift */; };
-		DC67842CBB26B45A3E684FDE5D287400 /* PersistentRateLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE7C2B053383415101A319E9215624A /* PersistentRateLimit.swift */; };
+		063DD3D46D82B61CE995627318D22363 /* ISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BA3AA3FFD9045DF7DFB03BAB7B454 /* ISO8601DateTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0D5672C8E3F7C0716F7934A00A9D84DF /* TransformOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC57EC4076137C4E7E40535CA4A88108 /* TransformOf.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		10113E207516DDCAC19E3B2FED7E12C4 /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C023B90B882361BA35FB558E1DE0138 /* LocksmithError.swift */; };
+		13EB929F72B356FC41F08CCF85D5D0C1 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04B277162A028327113A6F29476788F8 /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1495BCB330D338CEF2E39D10082B941C /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3AA21FB6DE9E3CE2C6B9F5FF97B244 /* LocksmithAccessibleOption.swift */; };
+		223CB6EF9908A6276E85F54B093C4317 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AEACDD939417064387023EE3CFFFE3 /* TransformType.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2324C86A7D8A16881EBEC0FFD32B93A8 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC70B86DAB8F08C77DDEFD9F7464AE /* DateTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3195A1F5D38867F8B24DC7114ED8194C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
+		3B629068F4BE1D7821957056F25E33C1 /* Locksmith-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9256CCEA25769E296E6892048F9744E /* Locksmith-dummy.m */; };
+		46485D36E37F397B7F56EE76B3382C85 /* Dictionary_Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F9A2F444EA707D0F1EF5BBDF00FF9 /* Dictionary_Initializers.swift */; };
+		4D56122B9710B3EADD744226A067F636 /* EnumTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C0AD422C1D2A2F9F26532D9E2063CA /* EnumTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5250F06F4BA279F40349E49DF1F23E87 /* ObjectMapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4856794D4EF012B345A807BB37BAB996 /* ObjectMapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		533599864D48D2CD81C9C7BB421F3448 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65711C4D3724DA3BBA5C6862CE9B0472 /* Mapper.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5C9BDDBB790ACE3711E8AD09A13E0FB2 /* LocksmithSecurityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E17987F4BFB818A271AADFAAF5C90C /* LocksmithSecurityClass.swift */; };
+		5DF3355C4ED929E3B6E0CF865782C391 /* ObjectMapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7216CDF18572EF9B837BB774F24D38 /* ObjectMapper-dummy.m */; };
+		612A5931CEEFDFA056FE645BDD784469 /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C27ADE6881EABAFBC0D777835E644 /* Locksmith.swift */; };
+		6145E9D0E716E317DCB023321C004135 /* RateLimit.h in Headers */ = {isa = PBXBuildFile; fileRef = 86B99EF2FD44668156009ECBDA5A76C8 /* RateLimit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62E4683DAD77C7AA7D91D61D45FED369 /* PersistentRateLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437D80D10F877FBA5E685AC4EEA6BBEB /* PersistentRateLimit.swift */; };
+		6B595899C2DE32358F2800878B58AA6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
+		7A0C13EB74FA59332B4E73D26835A7AC /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3EBAFDAFB7F5BFC859CB150AC95431 /* Map.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93E3452D2181CBED6FF21E9A0E9437D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
+		9444A66764073C6B2890EE5EA2AD8BDD /* RateLimit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA8B42FCDC1E720594DF168A6583A00 /* RateLimit-dummy.m */; };
+		A4695A815F7B56393CCA2035B20F5814 /* CustomDateFormatTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3B251E10D70C979E8E884446DA51EE /* CustomDateFormatTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AA0B9C265F96CA310C674C330D4C5592 /* Locksmith.h in Headers */ = {isa = PBXBuildFile; fileRef = F398242CFAEBD640CFA8B82DC9ACF21C /* Locksmith.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B652E8A2D76C218069E35A783B22F913 /* Pods-Movement-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5351435EA7C06BF9B8EAA82FBEBB52CE /* Pods-Movement-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA5642C05304670506C968D78D0062B7 /* Pods-Movement-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF5D91012A303BDCF268D7907DDF5D5 /* Pods-Movement-dummy.m */; };
+		C049E84E61F967054FB322C5873F15CC /* ToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56CC16133DB7F4EA87C0115A1DB4824 /* ToJSON.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C1E523FEF815C38562A66E2080A50216 /* RateLimit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EAE651451B9710A6D8FFCAD9493BAFFD /* RateLimit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC2443BEF39BB4254C340BAA445BCBD5 /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98B6C1AD070624B5DB58CB46F8C63C6 /* LocksmithInternetAuthenticationType.swift */; };
+		D234B23ACC5F69B9BE581EC70C15F8DE /* LocksmithInternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02460FDF272815C96AF0FF08D5CB0377 /* LocksmithInternetProtocol.swift */; };
+		D5BC01A39FBE77BB7A8BF4B8F2DA0C04 /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ADD6713B9FE879B83D1A726606079E /* DateFormatterTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E0E91B3657C79A467DE4AFFD43C98B18 /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F004D72450B90B305DCC79DAFE35D5 /* URLTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E45CB75232BB3B0A48024534702FE1BB /* FromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B51FF43B53233E2410A4E99EB9DE5D /* FromJSON.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		ECE6C646AD2118F84FD9FBE3594A3B68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0307982621563C439755B9BC0ED60A1A /* Foundation.framework */; };
+		F4261F3E1CE8D0B075E49198FAA9B843 /* RateLimit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F8C87E4D45FDE7663C93ADE7859550 /* RateLimit.swift */; };
+		F4B252E423D970FC4C6B8BDC3E946189 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E9EE5D908E7B0DA1618B2BF754A306 /* Operators.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F8C10BCF78AFD5231A37F1825B614C18 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60FA6CD62EB7A9C85C7DBBA20924D70A /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2330C8EC811BEB4E56868440EC284B39 /* PBXContainerItemProxy */ = {
+		3C2DB1D6D1387F0F3F91CA2FBD2D1519 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E82421CBEE4F9A6C8D5D9FEC459CE24A;
+			remoteInfo = ObjectMapper;
+		};
+		4163784D42428F16DA7A82791C7AFA91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FDEB1B62CBE8F1985DF1204A3922F1B;
+			remoteInfo = RateLimit;
+		};
+		E57D292E0DDBBE78466CA76C45F96D16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 92943306EC8070DF9CD02ECD505D2CD5;
 			remoteInfo = Locksmith;
 		};
-		B4E8EB0AC01474C8F443578F8ACA63F4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C3B5226B466225EFC73053AA33179A04;
-			remoteInfo = RateLimit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02460FDF272815C96AF0FF08D5CB0377 /* LocksmithInternetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetProtocol.swift; path = Source/LocksmithInternetProtocol.swift; sourceTree = "<group>"; };
 		0307982621563C439755B9BC0ED60A1A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		1885693C61C391642B08F8D2D58D70FD /* RateLimit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RateLimit-umbrella.h"; sourceTree = "<group>"; };
+		043BA3AA3FFD9045DF7DFB03BAB7B454 /* ISO8601DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateTransform.swift; path = ObjectMapper/Transforms/ISO8601DateTransform.swift; sourceTree = "<group>"; };
+		04B277162A028327113A6F29476788F8 /* Locksmith-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-umbrella.h"; sourceTree = "<group>"; };
+		07ADD6713B9FE879B83D1A726606079E /* DateFormatterTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = ObjectMapper/Transforms/DateFormatterTransform.swift; sourceTree = "<group>"; };
+		07F8C87E4D45FDE7663C93ADE7859550 /* RateLimit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RateLimit.swift; path = RateLimit/RateLimit.swift; sourceTree = "<group>"; };
+		15B51FF43B53233E2410A4E99EB9DE5D /* FromJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FromJSON.swift; path = ObjectMapper/Core/FromJSON.swift; sourceTree = "<group>"; };
 		1AF5D91012A303BDCF268D7907DDF5D5 /* Pods-Movement-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Movement-dummy.m"; sourceTree = "<group>"; };
-		1DBF28D5AE840BA3814CC82B85C1756A /* RateLimit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RateLimit.h; path = RateLimit/RateLimit.h; sourceTree = "<group>"; };
+		2B7D47F61CF3C66709681FAEB8923ECA /* ObjectMapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-prefix.pch"; sourceTree = "<group>"; };
+		2FA8B42FCDC1E720594DF168A6583A00 /* RateLimit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RateLimit-dummy.m"; sourceTree = "<group>"; };
 		30D2D54BCA6E2385D4A38EFA7DDB848A /* Pods-Movement-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Movement-resources.sh"; sourceTree = "<group>"; };
-		44D5C7EA657C527EC035D46184FD0906 /* Locksmith.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Locksmith.xcconfig; sourceTree = "<group>"; };
-		4DD13D36D25D9779A5A86A50FD1C86C2 /* Locksmith-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-umbrella.h"; sourceTree = "<group>"; };
+		314C27ADE6881EABAFBC0D777835E644 /* Locksmith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locksmith.swift; path = Source/Locksmith.swift; sourceTree = "<group>"; };
+		3887E84E7635A3264720347745C2B187 /* Locksmith-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-prefix.pch"; sourceTree = "<group>"; };
+		3F9F9A2F444EA707D0F1EF5BBDF00FF9 /* Dictionary_Initializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary_Initializers.swift; path = Source/Dictionary_Initializers.swift; sourceTree = "<group>"; };
+		4129E5849F3E82E2F7840D8328654986 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		437D80D10F877FBA5E685AC4EEA6BBEB /* PersistentRateLimit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PersistentRateLimit.swift; path = RateLimit/PersistentRateLimit.swift; sourceTree = "<group>"; };
+		43C0AD422C1D2A2F9F26532D9E2063CA /* EnumTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumTransform.swift; path = ObjectMapper/Transforms/EnumTransform.swift; sourceTree = "<group>"; };
+		4856794D4EF012B345A807BB37BAB996 /* ObjectMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-umbrella.h"; sourceTree = "<group>"; };
 		5351435EA7C06BF9B8EAA82FBEBB52CE /* Pods-Movement-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Movement-umbrella.h"; sourceTree = "<group>"; };
 		60FA6CD62EB7A9C85C7DBBA20924D70A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		65813E12BD36F27DB5CB18C81FF5F415 /* RateLimit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RateLimit-dummy.m"; sourceTree = "<group>"; };
-		67D34192238B6BC8715CC1577012F4FC /* Locksmith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Locksmith.h; path = Source/Locksmith.h; sourceTree = "<group>"; };
-		68165E265D3AD5771EFF343E2D440B71 /* Dictionary_Initializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary_Initializers.swift; path = Source/Dictionary_Initializers.swift; sourceTree = "<group>"; };
-		7289490A3E0DCA9C571B19E52FEFCF05 /* Pods_Movement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		76C07401436DD840FA43EC0BA1387797 /* Locksmith-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-prefix.pch"; sourceTree = "<group>"; };
+		64A80554B2BA3691C1DF5DEBF5C40187 /* ObjectMapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjectMapper.xcconfig; sourceTree = "<group>"; };
+		65711C4D3724DA3BBA5C6862CE9B0472 /* Mapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = ObjectMapper/Core/Mapper.swift; sourceTree = "<group>"; };
+		65F004D72450B90B305DCC79DAFE35D5 /* URLTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLTransform.swift; path = ObjectMapper/Transforms/URLTransform.swift; sourceTree = "<group>"; };
+		6C8E9B9F7474EA294C2ACFD47DFA3F9D /* RateLimit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RateLimit-prefix.pch"; sourceTree = "<group>"; };
 		7CC9650FBE7135572CCA7ECA6557B7F1 /* Pods-Movement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Movement.release.xcconfig"; sourceTree = "<group>"; };
-		8A6CB88AEBD40E835EDDACA5BE064D43 /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetAuthenticationType.swift; path = Source/LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
+		8429E56C071193B66EEFA4818FFC4CFC /* ObjectMapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ObjectMapper.modulemap; sourceTree = "<group>"; };
+		86B99EF2FD44668156009ECBDA5A76C8 /* RateLimit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RateLimit.h; path = RateLimit/RateLimit.h; sourceTree = "<group>"; };
+		8A7216CDF18572EF9B837BB774F24D38 /* ObjectMapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjectMapper-dummy.m"; sourceTree = "<group>"; };
+		8B3EBAFDAFB7F5BFC859CB150AC95431 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = ObjectMapper/Core/Map.swift; sourceTree = "<group>"; };
+		8C023B90B882361BA35FB558E1DE0138 /* LocksmithError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithError.swift; path = Source/LocksmithError.swift; sourceTree = "<group>"; };
 		8C90C6FBF412D22A0D0FFCE9741A7A4B /* Pods-Movement.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Movement.modulemap"; sourceTree = "<group>"; };
-		8E330FB32F61C63F13E15BCDA828323E /* Locksmith-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Locksmith-dummy.m"; sourceTree = "<group>"; };
-		9CE7C2B053383415101A319E9215624A /* PersistentRateLimit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PersistentRateLimit.swift; path = RateLimit/PersistentRateLimit.swift; sourceTree = "<group>"; };
-		A15EF5C6485F906BBFC1C8930884A1A6 /* LocksmithInternetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetProtocol.swift; path = Source/LocksmithInternetProtocol.swift; sourceTree = "<group>"; };
-		A43E1CD1123F046954F36FB54E7D236E /* RateLimit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RateLimit.modulemap; sourceTree = "<group>"; };
-		A75114C41352320BB6A85160A4C4BFE6 /* RateLimit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RateLimit.xcconfig; sourceTree = "<group>"; };
+		8EBE51B33BA0FEF8A88D70A6B9BBC903 /* RateLimit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RateLimit.xcconfig; sourceTree = "<group>"; };
+		8FFC9DCBA5003949EE3651727D5D5AD4 /* Locksmith.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Locksmith.xcconfig; sourceTree = "<group>"; };
+		A0E17987F4BFB818A271AADFAAF5C90C /* LocksmithSecurityClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithSecurityClass.swift; path = Source/LocksmithSecurityClass.swift; sourceTree = "<group>"; };
 		A895D4561A8B304D50D355A75C194504 /* Pods-Movement-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Movement-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AC6ED4B407C488FE3903C7E8E44A24B7 /* RateLimit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RateLimit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9E9EE5D908E7B0DA1618B2BF754A306 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = ObjectMapper/Core/Operators.swift; sourceTree = "<group>"; };
+		ACEC70B86DAB8F08C77DDEFD9F7464AE /* DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTransform.swift; path = ObjectMapper/Transforms/DateTransform.swift; sourceTree = "<group>"; };
 		B1FCD113D462DA3353273E5A1E53E75D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B265C0293FB5DAF208574520CBC3EA20 /* Locksmith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locksmith.swift; path = Source/Locksmith.swift; sourceTree = "<group>"; };
-		B955B3402C947EB1CF43C1725282CABB /* Locksmith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Locksmith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9256CCEA25769E296E6892048F9744E /* Locksmith-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Locksmith-dummy.m"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C18E2154A9CC93E0570B81184E26E84C /* RateLimit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RateLimit.swift; path = RateLimit/RateLimit.swift; sourceTree = "<group>"; };
 		C785C2273B284A1B944A14A21604B9BB /* Pods-Movement-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Movement-acknowledgements.plist"; sourceTree = "<group>"; };
-		C7B7DBEC005EF011EB7DAF0931FF28AD /* LocksmithAccessibleOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithAccessibleOption.swift; path = Source/LocksmithAccessibleOption.swift; sourceTree = "<group>"; };
+		CA3AA21FB6DE9E3CE2C6B9F5FF97B244 /* LocksmithAccessibleOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithAccessibleOption.swift; path = Source/LocksmithAccessibleOption.swift; sourceTree = "<group>"; };
+		CC57EC4076137C4E7E40535CA4A88108 /* TransformOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOf.swift; path = ObjectMapper/Transforms/TransformOf.swift; sourceTree = "<group>"; };
 		CE00F15701F0A25C43465992B99888AD /* Pods-Movement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Movement.debug.xcconfig"; sourceTree = "<group>"; };
+		CF5DD5AF8B578006D42B9673549D0129 /* Pods_Movement.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movement.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D56CC16133DB7F4EA87C0115A1DB4824 /* ToJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToJSON.swift; path = ObjectMapper/Core/ToJSON.swift; sourceTree = "<group>"; };
+		D623C1606248094C3719D00635BD0C5E /* Locksmith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Locksmith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D85570F6D5FEB2395A2D9F21805F120B /* RateLimit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = RateLimit.modulemap; sourceTree = "<group>"; };
 		DAC4E6C9B135328217F01DA2A741A6C6 /* Pods-Movement-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Movement-frameworks.sh"; sourceTree = "<group>"; };
-		DBB64F05FDE2A1AEE3E51A51EE08FDCB /* LocksmithError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithError.swift; path = Source/LocksmithError.swift; sourceTree = "<group>"; };
-		E10D645A84B64F26AEFABCBE4E90E74D /* RateLimit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RateLimit-prefix.pch"; sourceTree = "<group>"; };
-		F4DF9E18165C4277B0B6B6C3BCF59316 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FBCA4DDE885C4A99DF46EB9D0A1F1F39 /* Locksmith.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Locksmith.modulemap; sourceTree = "<group>"; };
-		FC74174823A483CC6E684CB8160A3BEB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF7D364313BA8D80E358E276635E48F1 /* LocksmithSecurityClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithSecurityClass.swift; path = Source/LocksmithSecurityClass.swift; sourceTree = "<group>"; };
+		DAFAE51CA26D328A963A0A42A673CF3B /* Locksmith.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Locksmith.modulemap; sourceTree = "<group>"; };
+		DBC038AD281D2CD79A04BD2237BC54E2 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E98B6C1AD070624B5DB58CB46F8C63C6 /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetAuthenticationType.swift; path = Source/LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
+		EAE651451B9710A6D8FFCAD9493BAFFD /* RateLimit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RateLimit-umbrella.h"; sourceTree = "<group>"; };
+		EB0AA064593C45E437D339CF59B6CAE2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC3B251E10D70C979E8E884446DA51EE /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = ObjectMapper/Transforms/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
+		EDF714D7F4CDECF12BCE7DC5C7B50617 /* RateLimit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RateLimit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1AEACDD939417064387023EE3CFFFE3 /* TransformType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformType.swift; path = ObjectMapper/Transforms/TransformType.swift; sourceTree = "<group>"; };
+		F398242CFAEBD640CFA8B82DC9ACF21C /* Locksmith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Locksmith.h; path = Source/Locksmith.h; sourceTree = "<group>"; };
+		F531B6F83182BDBC95D27349CC26D672 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0E7DB732F21ABEABD6E0204BE1C84ECD /* Frameworks */ = {
+		06A5066FB238BE5B65C1B531CABBFEC0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				765560F1B832789694557F2439E07F35 /* Foundation.framework in Frameworks */,
+				93E3452D2181CBED6FF21E9A0E9437D9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		24EC09F91B95EFFBFD10369D40FB6385 /* Frameworks */ = {
+		09C22EEA45E03996B0C28D87154E94EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3EF96986ADE1719524F65F3357AC007 /* Foundation.framework in Frameworks */,
+				3195A1F5D38867F8B24DC7114ED8194C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +155,14 @@
 			files = (
 				ECE6C646AD2118F84FD9FBE3594A3B68 /* Foundation.framework in Frameworks */,
 				F8C10BCF78AFD5231A37F1825B614C18 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE1F3EA27D2A239975BA90C8BA35906 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B595899C2DE32358F2800878B58AA6D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,28 +187,35 @@
 			path = "Target Support Files/Pods-Movement";
 			sourceTree = "<group>";
 		};
-		241F24BFBBB1E41CB5441EC053C79B66 /* Support Files */ = {
+		0BB528A084231F8DDBEE9E607CBB462A /* ObjectMapper */ = {
 			isa = PBXGroup;
 			children = (
-				F4DF9E18165C4277B0B6B6C3BCF59316 /* Info.plist */,
-				FBCA4DDE885C4A99DF46EB9D0A1F1F39 /* Locksmith.modulemap */,
-				44D5C7EA657C527EC035D46184FD0906 /* Locksmith.xcconfig */,
-				8E330FB32F61C63F13E15BCDA828323E /* Locksmith-dummy.m */,
-				76C07401436DD840FA43EC0BA1387797 /* Locksmith-prefix.pch */,
-				4DD13D36D25D9779A5A86A50FD1C86C2 /* Locksmith-umbrella.h */,
+				EC3B251E10D70C979E8E884446DA51EE /* CustomDateFormatTransform.swift */,
+				07ADD6713B9FE879B83D1A726606079E /* DateFormatterTransform.swift */,
+				ACEC70B86DAB8F08C77DDEFD9F7464AE /* DateTransform.swift */,
+				43C0AD422C1D2A2F9F26532D9E2063CA /* EnumTransform.swift */,
+				15B51FF43B53233E2410A4E99EB9DE5D /* FromJSON.swift */,
+				043BA3AA3FFD9045DF7DFB03BAB7B454 /* ISO8601DateTransform.swift */,
+				8B3EBAFDAFB7F5BFC859CB150AC95431 /* Map.swift */,
+				65711C4D3724DA3BBA5C6862CE9B0472 /* Mapper.swift */,
+				A9E9EE5D908E7B0DA1618B2BF754A306 /* Operators.swift */,
+				D56CC16133DB7F4EA87C0115A1DB4824 /* ToJSON.swift */,
+				CC57EC4076137C4E7E40535CA4A88108 /* TransformOf.swift */,
+				F1AEACDD939417064387023EE3CFFFE3 /* TransformType.swift */,
+				65F004D72450B90B305DCC79DAFE35D5 /* URLTransform.swift */,
+				7BE2A7BEECFDA3A7DB9FAF6A52B711C9 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Locksmith";
+			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
-		353E1ADB04C9FE5BE32493B003EE81B1 /* Products */ = {
+		3484EEE77216F060E63EDEB131946523 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B955B3402C947EB1CF43C1725282CABB /* Locksmith.framework */,
-				7289490A3E0DCA9C571B19E52FEFCF05 /* Pods_Movement.framework */,
-				AC6ED4B407C488FE3903C7E8E44A24B7 /* RateLimit.framework */,
+				8358F0ED7690A366C7CAC04AE0B50FF0 /* Locksmith */,
+				0BB528A084231F8DDBEE9E607CBB462A /* ObjectMapper */,
+				BA83A98EE295F65DCF50F4A8D95070A1 /* RateLimit */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
@@ -168,20 +226,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4793D1AAA8B9CC346370621A54E121B6 /* Locksmith */ = {
+		44418FF5EEC0459D65BF00BB71EB2D52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				68165E265D3AD5771EFF343E2D440B71 /* Dictionary_Initializers.swift */,
-				67D34192238B6BC8715CC1577012F4FC /* Locksmith.h */,
-				B265C0293FB5DAF208574520CBC3EA20 /* Locksmith.swift */,
-				C7B7DBEC005EF011EB7DAF0931FF28AD /* LocksmithAccessibleOption.swift */,
-				DBB64F05FDE2A1AEE3E51A51EE08FDCB /* LocksmithError.swift */,
-				8A6CB88AEBD40E835EDDACA5BE064D43 /* LocksmithInternetAuthenticationType.swift */,
-				A15EF5C6485F906BBFC1C8930884A1A6 /* LocksmithInternetProtocol.swift */,
-				FF7D364313BA8D80E358E276635E48F1 /* LocksmithSecurityClass.swift */,
-				241F24BFBBB1E41CB5441EC053C79B66 /* Support Files */,
+				D623C1606248094C3719D00635BD0C5E /* Locksmith.framework */,
+				DBC038AD281D2CD79A04BD2237BC54E2 /* ObjectMapper.framework */,
+				CF5DD5AF8B578006D42B9673549D0129 /* Pods_Movement.framework */,
+				EDF714D7F4CDECF12BCE7DC5C7B50617 /* RateLimit.framework */,
 			);
-			path = Locksmith;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		5A86A7991AF0B723B7571D408852AEBF /* iOS */ = {
@@ -193,15 +246,73 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		73B1DB57CD15ACF4696493F23A0BB5E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4129E5849F3E82E2F7840D8328654986 /* Info.plist */,
+				DAFAE51CA26D328A963A0A42A673CF3B /* Locksmith.modulemap */,
+				8FFC9DCBA5003949EE3651727D5D5AD4 /* Locksmith.xcconfig */,
+				B9256CCEA25769E296E6892048F9744E /* Locksmith-dummy.m */,
+				3887E84E7635A3264720347745C2B187 /* Locksmith-prefix.pch */,
+				04B277162A028327113A6F29476788F8 /* Locksmith-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Locksmith";
+			sourceTree = "<group>";
+		};
+		7BE2A7BEECFDA3A7DB9FAF6A52B711C9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F531B6F83182BDBC95D27349CC26D672 /* Info.plist */,
+				8429E56C071193B66EEFA4818FFC4CFC /* ObjectMapper.modulemap */,
+				64A80554B2BA3691C1DF5DEBF5C40187 /* ObjectMapper.xcconfig */,
+				8A7216CDF18572EF9B837BB774F24D38 /* ObjectMapper-dummy.m */,
+				2B7D47F61CF3C66709681FAEB8923ECA /* ObjectMapper-prefix.pch */,
+				4856794D4EF012B345A807BB37BAB996 /* ObjectMapper-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ObjectMapper";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				ED443D22100E828F913AAF4385C37FB8 /* Pods */,
-				353E1ADB04C9FE5BE32493B003EE81B1 /* Products */,
+				3484EEE77216F060E63EDEB131946523 /* Pods */,
+				44418FF5EEC0459D65BF00BB71EB2D52 /* Products */,
 				B948534ECCC4FE18082F9C82A8AE50BA /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8358F0ED7690A366C7CAC04AE0B50FF0 /* Locksmith */ = {
+			isa = PBXGroup;
+			children = (
+				3F9F9A2F444EA707D0F1EF5BBDF00FF9 /* Dictionary_Initializers.swift */,
+				F398242CFAEBD640CFA8B82DC9ACF21C /* Locksmith.h */,
+				314C27ADE6881EABAFBC0D777835E644 /* Locksmith.swift */,
+				CA3AA21FB6DE9E3CE2C6B9F5FF97B244 /* LocksmithAccessibleOption.swift */,
+				8C023B90B882361BA35FB558E1DE0138 /* LocksmithError.swift */,
+				E98B6C1AD070624B5DB58CB46F8C63C6 /* LocksmithInternetAuthenticationType.swift */,
+				02460FDF272815C96AF0FF08D5CB0377 /* LocksmithInternetProtocol.swift */,
+				A0E17987F4BFB818A271AADFAAF5C90C /* LocksmithSecurityClass.swift */,
+				73B1DB57CD15ACF4696493F23A0BB5E0 /* Support Files */,
+			);
+			path = Locksmith;
+			sourceTree = "<group>";
+		};
+		84FF833D2558C600C53936F3553E3FFD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB0AA064593C45E437D339CF59B6CAE2 /* Info.plist */,
+				D85570F6D5FEB2395A2D9F21805F120B /* RateLimit.modulemap */,
+				8EBE51B33BA0FEF8A88D70A6B9BBC903 /* RateLimit.xcconfig */,
+				2FA8B42FCDC1E720594DF168A6583A00 /* RateLimit-dummy.m */,
+				6C8E9B9F7474EA294C2ACFD47DFA3F9D /* RateLimit-prefix.pch */,
+				EAE651451B9710A6D8FFCAD9493BAFFD /* RateLimit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RateLimit";
 			sourceTree = "<group>";
 		};
 		B948534ECCC4FE18082F9C82A8AE50BA /* Targets Support Files */ = {
@@ -212,57 +323,42 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		D63AC72F8BFA9B3FFA5A4158A8E02920 /* Support Files */ = {
+		BA83A98EE295F65DCF50F4A8D95070A1 /* RateLimit */ = {
 			isa = PBXGroup;
 			children = (
-				FC74174823A483CC6E684CB8160A3BEB /* Info.plist */,
-				A43E1CD1123F046954F36FB54E7D236E /* RateLimit.modulemap */,
-				A75114C41352320BB6A85160A4C4BFE6 /* RateLimit.xcconfig */,
-				65813E12BD36F27DB5CB18C81FF5F415 /* RateLimit-dummy.m */,
-				E10D645A84B64F26AEFABCBE4E90E74D /* RateLimit-prefix.pch */,
-				1885693C61C391642B08F8D2D58D70FD /* RateLimit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/RateLimit";
-			sourceTree = "<group>";
-		};
-		E94B5239DAB1F157DDCABCD6BE65A374 /* RateLimit */ = {
-			isa = PBXGroup;
-			children = (
-				9CE7C2B053383415101A319E9215624A /* PersistentRateLimit.swift */,
-				1DBF28D5AE840BA3814CC82B85C1756A /* RateLimit.h */,
-				C18E2154A9CC93E0570B81184E26E84C /* RateLimit.swift */,
-				D63AC72F8BFA9B3FFA5A4158A8E02920 /* Support Files */,
+				437D80D10F877FBA5E685AC4EEA6BBEB /* PersistentRateLimit.swift */,
+				86B99EF2FD44668156009ECBDA5A76C8 /* RateLimit.h */,
+				07F8C87E4D45FDE7663C93ADE7859550 /* RateLimit.swift */,
+				84FF833D2558C600C53936F3553E3FFD /* Support Files */,
 			);
 			path = RateLimit;
-			sourceTree = "<group>";
-		};
-		ED443D22100E828F913AAF4385C37FB8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4793D1AAA8B9CC346370621A54E121B6 /* Locksmith */,
-				E94B5239DAB1F157DDCABCD6BE65A374 /* RateLimit */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9C62EBE8E2D34F6FD24E76580E138E43 /* Headers */ = {
+		8ECE297A6AA0798A6C57551A53DC72AE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD736685B76BC0C7AEA95DB3CEF75130 /* Pods-Movement-umbrella.h in Headers */,
+				5250F06F4BA279F40349E49DF1F23E87 /* ObjectMapper-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5CAF5E74447692E37FF5432EAD84FE2 /* Headers */ = {
+		9C32A54855F8301D50A1C0549D3851A2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C0F5A51A92347D11BD97C7236B939D6 /* RateLimit-umbrella.h in Headers */,
-				6752D2B751C9400BF9DAD352F36F3E01 /* RateLimit.h in Headers */,
+				B652E8A2D76C218069E35A783B22F913 /* Pods-Movement-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC735BF6C653101F24BA2602DBC81227 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1E523FEF815C38562A66E2080A50216 /* RateLimit-umbrella.h in Headers */,
+				6145E9D0E716E317DCB023321C004135 /* RateLimit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,23 +374,21 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9082B791313D7B5C81F671DB73FA4CB5 /* Pods-Movement */ = {
+		6FDEB1B62CBE8F1985DF1204A3922F1B /* RateLimit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A600D318B4B2751FD07FC9368DD86F7 /* Build configuration list for PBXNativeTarget "Pods-Movement" */;
+			buildConfigurationList = E132701BD49E354489C78F6063B08E24 /* Build configuration list for PBXNativeTarget "RateLimit" */;
 			buildPhases = (
-				08EFD45C8022D7EFB6871EB733C9C09D /* Sources */,
-				0E7DB732F21ABEABD6E0204BE1C84ECD /* Frameworks */,
-				9C62EBE8E2D34F6FD24E76580E138E43 /* Headers */,
+				473A7DAF6E620C99733C11D5D39EDFE2 /* Sources */,
+				09C22EEA45E03996B0C28D87154E94EB /* Frameworks */,
+				CC735BF6C653101F24BA2602DBC81227 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2F5735382AB5F74ECE7D2F15EBDB0D64 /* PBXTargetDependency */,
-				1218835028C0BD71D35B9B6F1646482A /* PBXTargetDependency */,
 			);
-			name = "Pods-Movement";
-			productName = "Pods-Movement";
-			productReference = 7289490A3E0DCA9C571B19E52FEFCF05 /* Pods_Movement.framework */;
+			name = RateLimit;
+			productName = RateLimit;
+			productReference = EDF714D7F4CDECF12BCE7DC5C7B50617 /* RateLimit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		92943306EC8070DF9CD02ECD505D2CD5 /* Locksmith */ = {
@@ -311,24 +405,44 @@
 			);
 			name = Locksmith;
 			productName = Locksmith;
-			productReference = B955B3402C947EB1CF43C1725282CABB /* Locksmith.framework */;
+			productReference = D623C1606248094C3719D00635BD0C5E /* Locksmith.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C3B5226B466225EFC73053AA33179A04 /* RateLimit */ = {
+		98B598D78985860A9143B1D0F6EB5B75 /* Pods-Movement */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A3F0C4FE56A9B30B40D9AB244609DD14 /* Build configuration list for PBXNativeTarget "RateLimit" */;
+			buildConfigurationList = 6D6AF45B13D74B41FAE66881C5868C66 /* Build configuration list for PBXNativeTarget "Pods-Movement" */;
 			buildPhases = (
-				751F3531A0D134021BB9E6F2F732257E /* Sources */,
-				24EC09F91B95EFFBFD10369D40FB6385 /* Frameworks */,
-				D5CAF5E74447692E37FF5432EAD84FE2 /* Headers */,
+				6B59C0C3BC4ED3549B2B553CF76B4641 /* Sources */,
+				06A5066FB238BE5B65C1B531CABBFEC0 /* Frameworks */,
+				9C32A54855F8301D50A1C0549D3851A2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D6A8841FB25ACE7734F7DA2FD6F5B1E /* PBXTargetDependency */,
+				D4E91F74B8EE49FA70CBDC94595D5FCE /* PBXTargetDependency */,
+				238F01DDDB7C48CEA33EECE74535A614 /* PBXTargetDependency */,
+			);
+			name = "Pods-Movement";
+			productName = "Pods-Movement";
+			productReference = CF5DD5AF8B578006D42B9673549D0129 /* Pods_Movement.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E82421CBEE4F9A6C8D5D9FEC459CE24A /* ObjectMapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27F600DA90FD0666FCC35AE6DD3A5774 /* Build configuration list for PBXNativeTarget "ObjectMapper" */;
+			buildPhases = (
+				35C59C531CDEC587212E647D3102A5B8 /* Sources */,
+				CEE1F3EA27D2A239975BA90C8BA35906 /* Frameworks */,
+				8ECE297A6AA0798A6C57551A53DC72AE /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RateLimit;
-			productName = RateLimit;
-			productReference = AC6ED4B407C488FE3903C7E8E44A24B7 /* RateLimit.framework */;
+			name = ObjectMapper;
+			productName = ObjectMapper;
+			productReference = DBC038AD281D2CD79A04BD2237BC54E2 /* ObjectMapper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -339,14 +453,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					92943306EC8070DF9CD02ECD505D2CD5 = {
-						DevelopmentTeam = MK8BGYA4UC;
-					};
-					C3B5226B466225EFC73053AA33179A04 = {
-						DevelopmentTeam = MK8BGYA4UC;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -356,33 +462,55 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 353E1ADB04C9FE5BE32493B003EE81B1 /* Products */;
+			productRefGroup = 44418FF5EEC0459D65BF00BB71EB2D52 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				92943306EC8070DF9CD02ECD505D2CD5 /* Locksmith */,
-				9082B791313D7B5C81F671DB73FA4CB5 /* Pods-Movement */,
-				C3B5226B466225EFC73053AA33179A04 /* RateLimit */,
+				E82421CBEE4F9A6C8D5D9FEC459CE24A /* ObjectMapper */,
+				98B598D78985860A9143B1D0F6EB5B75 /* Pods-Movement */,
+				6FDEB1B62CBE8F1985DF1204A3922F1B /* RateLimit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		08EFD45C8022D7EFB6871EB733C9C09D /* Sources */ = {
+		35C59C531CDEC587212E647D3102A5B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B94D60E77398ABBEDE7836BBCA600475 /* Pods-Movement-dummy.m in Sources */,
+				A4695A815F7B56393CCA2035B20F5814 /* CustomDateFormatTransform.swift in Sources */,
+				D5BC01A39FBE77BB7A8BF4B8F2DA0C04 /* DateFormatterTransform.swift in Sources */,
+				2324C86A7D8A16881EBEC0FFD32B93A8 /* DateTransform.swift in Sources */,
+				4D56122B9710B3EADD744226A067F636 /* EnumTransform.swift in Sources */,
+				E45CB75232BB3B0A48024534702FE1BB /* FromJSON.swift in Sources */,
+				063DD3D46D82B61CE995627318D22363 /* ISO8601DateTransform.swift in Sources */,
+				7A0C13EB74FA59332B4E73D26835A7AC /* Map.swift in Sources */,
+				533599864D48D2CD81C9C7BB421F3448 /* Mapper.swift in Sources */,
+				5DF3355C4ED929E3B6E0CF865782C391 /* ObjectMapper-dummy.m in Sources */,
+				F4B252E423D970FC4C6B8BDC3E946189 /* Operators.swift in Sources */,
+				C049E84E61F967054FB322C5873F15CC /* ToJSON.swift in Sources */,
+				0D5672C8E3F7C0716F7934A00A9D84DF /* TransformOf.swift in Sources */,
+				223CB6EF9908A6276E85F54B093C4317 /* TransformType.swift in Sources */,
+				E0E91B3657C79A467DE4AFFD43C98B18 /* URLTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		751F3531A0D134021BB9E6F2F732257E /* Sources */ = {
+		473A7DAF6E620C99733C11D5D39EDFE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC67842CBB26B45A3E684FDE5D287400 /* PersistentRateLimit.swift in Sources */,
-				73B2289B89B0F920ACF468489D8A5D9E /* RateLimit-dummy.m in Sources */,
-				1D311136A90349720FCAAEA30202DF41 /* RateLimit.swift in Sources */,
+				62E4683DAD77C7AA7D91D61D45FED369 /* PersistentRateLimit.swift in Sources */,
+				9444A66764073C6B2890EE5EA2AD8BDD /* RateLimit-dummy.m in Sources */,
+				F4261F3E1CE8D0B075E49198FAA9B843 /* RateLimit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B59C0C3BC4ED3549B2B553CF76B4641 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA5642C05304670506C968D78D0062B7 /* Pods-Movement-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,22 +532,86 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1218835028C0BD71D35B9B6F1646482A /* PBXTargetDependency */ = {
+		238F01DDDB7C48CEA33EECE74535A614 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RateLimit;
-			target = C3B5226B466225EFC73053AA33179A04 /* RateLimit */;
-			targetProxy = B4E8EB0AC01474C8F443578F8ACA63F4 /* PBXContainerItemProxy */;
+			target = 6FDEB1B62CBE8F1985DF1204A3922F1B /* RateLimit */;
+			targetProxy = 4163784D42428F16DA7A82791C7AFA91 /* PBXContainerItemProxy */;
 		};
-		2F5735382AB5F74ECE7D2F15EBDB0D64 /* PBXTargetDependency */ = {
+		4D6A8841FB25ACE7734F7DA2FD6F5B1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Locksmith;
 			target = 92943306EC8070DF9CD02ECD505D2CD5 /* Locksmith */;
-			targetProxy = 2330C8EC811BEB4E56868440EC284B39 /* PBXContainerItemProxy */;
+			targetProxy = E57D292E0DDBBE78466CA76C45F96D16 /* PBXContainerItemProxy */;
+		};
+		D4E91F74B8EE49FA70CBDC94595D5FCE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjectMapper;
+			target = E82421CBEE4F9A6C8D5D9FEC459CE24A /* ObjectMapper */;
+			targetProxy = 3C2DB1D6D1387F0F3F91CA2FBD2D1519 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		221D5091B4976E659DBCB0439D5C46B4 /* Debug */ = {
+		0E2C7B5FA953830DE3623501223610B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC9650FBE7135572CCA7ECA6557B7F1 /* Pods-Movement.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Movement/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Movement/Pods-Movement.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Movement;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		16D6C78FBDD250956848F89081DE26B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EBE51B33BA0FEF8A88D70A6B9BBC903 /* RateLimit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RateLimit/RateLimit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RateLimit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RateLimit/RateLimit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RateLimit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5B08D7F0134FECE12D12DF96252853A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE00F15701F0A25C43465992B99888AD /* Pods-Movement.debug.xcconfig */;
 			buildSettings = {
@@ -450,11 +642,37 @@
 			};
 			name = Debug;
 		};
+		5B478AA8E518DF2661BA746A4A8635CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64A80554B2BA3691C1DF5DEBF5C40187 /* ObjectMapper.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ObjectMapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ObjectMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		5C50ED38E4F95B15A46E75AA2B845366 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44D5C7EA657C527EC035D46184FD0906 /* Locksmith.xcconfig */;
+			baseConfigurationReference = 8FFC9DCBA5003949EE3651727D5D5AD4 /* Locksmith.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -470,7 +688,6 @@
 				MODULEMAP_FILE = "Target Support Files/Locksmith/Locksmith.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Locksmith;
-				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -480,9 +697,9 @@
 			};
 			name = Debug;
 		};
-		82E6E479A5F1C8FE88A8E8AE481F6BC5 /* Release */ = {
+		814715928F216F5DFC02114E0D7185CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CC9650FBE7135572CCA7ECA6557B7F1 /* Pods-Movement.release.xcconfig */;
+			baseConfigurationReference = 8EBE51B33BA0FEF8A88D70A6B9BBC903 /* RateLimit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -491,17 +708,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Movement/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/RateLimit/RateLimit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RateLimit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Movement/Pods-Movement.modulemap";
+				MODULEMAP_FILE = "Target Support Files/RateLimit/RateLimit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_Movement;
+				PRODUCT_NAME = RateLimit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -512,9 +726,8 @@
 		};
 		8D8066141B18E38C16EA0F29BE66A045 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44D5C7EA657C527EC035D46184FD0906 /* Locksmith.xcconfig */;
+			baseConfigurationReference = 8FFC9DCBA5003949EE3651727D5D5AD4 /* Locksmith.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -530,7 +743,6 @@
 				MODULEMAP_FILE = "Target Support Files/Locksmith/Locksmith.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Locksmith;
-				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -578,65 +790,6 @@
 			};
 			name = Debug;
 		};
-		D79ECF652A8AC4BC9B3505B344C11A48 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A75114C41352320BB6A85160A4C4BFE6 /* RateLimit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/RateLimit/RateLimit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RateLimit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RateLimit/RateLimit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = RateLimit;
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EF291570D63A3856C81061921048C4B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A75114C41352320BB6A85160A4C4BFE6 /* RateLimit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/RateLimit/RateLimit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RateLimit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RateLimit/RateLimit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = RateLimit;
-				PROVISIONING_PROFILE = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -671,9 +824,46 @@
 			};
 			name = Release;
 		};
+		FC31F3C7C05C0CE4CFAF3512CE037A69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64A80554B2BA3691C1DF5DEBF5C40187 /* ObjectMapper.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ObjectMapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ObjectMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		27F600DA90FD0666FCC35AE6DD3A5774 /* Build configuration list for PBXNativeTarget "ObjectMapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC31F3C7C05C0CE4CFAF3512CE037A69 /* Debug */,
+				5B478AA8E518DF2661BA746A4A8635CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -683,11 +873,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A600D318B4B2751FD07FC9368DD86F7 /* Build configuration list for PBXNativeTarget "Pods-Movement" */ = {
+		6D6AF45B13D74B41FAE66881C5868C66 /* Build configuration list for PBXNativeTarget "Pods-Movement" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				221D5091B4976E659DBCB0439D5C46B4 /* Debug */,
-				82E6E479A5F1C8FE88A8E8AE481F6BC5 /* Release */,
+				5B08D7F0134FECE12D12DF96252853A1 /* Debug */,
+				0E2C7B5FA953830DE3623501223610B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -701,11 +891,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3F0C4FE56A9B30B40D9AB244609DD14 /* Build configuration list for PBXNativeTarget "RateLimit" */ = {
+		E132701BD49E354489C78F6063B08E24 /* Build configuration list for PBXNativeTarget "RateLimit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D79ECF652A8AC4BC9B3505B344C11A48 /* Debug */,
-				EF291570D63A3856C81061921048C4B3 /* Release */,
+				16D6C78FBDD250956848F89081DE26B9 /* Debug */,
+				814715928F216F5DFC02114E0D7185CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

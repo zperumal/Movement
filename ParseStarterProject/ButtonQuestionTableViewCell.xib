@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -20,14 +20,6 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WWJ-fs-sIf">
                         <rect key="frame" x="8" y="37" width="351" height="113"/>
                         <subviews>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZT-iv-JVJ">
-                                <rect key="frame" x="8" y="8" width="169" height="27"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="169" id="arF-pV-gjN"/>
-                                    <constraint firstAttribute="height" constant="27" id="zFK-Vv-gEf"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
                             <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCb-cp-Zfj">
                                 <rect key="frame" x="182" y="8" width="169" height="27"/>
                                 <state key="normal" title="Button"/>
@@ -40,7 +32,7 @@
                                 <rect key="frame" x="8" y="43" width="169" height="27"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ8-nQ-cHQ">
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ8-nQ-cHQ">
                                 <rect key="frame" x="8" y="78" width="169" height="27"/>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -48,12 +40,22 @@
                                 <rect key="frame" x="182" y="77" width="169" height="27"/>
                                 <state key="normal" title="Skip"/>
                             </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZT-iv-JVJ">
+                                <rect key="frame" x="8" y="8" width="169" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="169" id="arF-pV-gjN"/>
+                                    <constraint firstAttribute="height" constant="27" id="zFK-Vv-gEf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cQ8-nQ-cHQ" firstAttribute="top" secondItem="r48-0b-ztt" secondAttribute="bottom" constant="8" symbolic="YES" id="2w1-bg-DKW"/>
+                            <constraint firstItem="PCb-cp-Zfj" firstAttribute="centerY" secondItem="HZT-iv-JVJ" secondAttribute="centerY" id="2xW-bO-9mz"/>
                             <constraint firstItem="r48-0b-ztt" firstAttribute="leading" secondItem="WWJ-fs-sIf" secondAttribute="leadingMargin" id="6PY-hx-IVp"/>
                             <constraint firstAttribute="bottom" secondItem="8f7-vd-o9L" secondAttribute="bottom" constant="9" id="7x9-FS-r9S"/>
+                            <constraint firstItem="hMg-OK-Kbb" firstAttribute="centerY" secondItem="r48-0b-ztt" secondAttribute="centerY" id="7xa-JG-are"/>
                             <constraint firstItem="PCb-cp-Zfj" firstAttribute="baseline" secondItem="HZT-iv-JVJ" secondAttribute="firstBaseline" id="8Qd-q6-DMG"/>
                             <constraint firstItem="8f7-vd-o9L" firstAttribute="leading" secondItem="cQ8-nQ-cHQ" secondAttribute="trailing" constant="5" id="GZk-tU-AgB"/>
                             <constraint firstItem="HZT-iv-JVJ" firstAttribute="top" secondItem="WWJ-fs-sIf" secondAttribute="topMargin" id="Hp0-nE-L9Y"/>
@@ -64,9 +66,11 @@
                             <constraint firstItem="8f7-vd-o9L" firstAttribute="leading" secondItem="HZT-iv-JVJ" secondAttribute="trailing" constant="5" id="RDc-pB-pVP"/>
                             <constraint firstItem="HZT-iv-JVJ" firstAttribute="top" secondItem="PCb-cp-Zfj" secondAttribute="top" id="RdE-6N-eif"/>
                             <constraint firstItem="HZT-iv-JVJ" firstAttribute="baseline" secondItem="PCb-cp-Zfj" secondAttribute="firstBaseline" id="Uuu-JY-n44"/>
+                            <constraint firstItem="8f7-vd-o9L" firstAttribute="centerX" secondItem="hMg-OK-Kbb" secondAttribute="centerX" id="VDA-Bj-yyd"/>
                             <constraint firstItem="8f7-vd-o9L" firstAttribute="top" secondItem="hMg-OK-Kbb" secondAttribute="bottom" constant="7" id="VKo-TT-CYS"/>
                             <constraint firstItem="8f7-vd-o9L" firstAttribute="leading" secondItem="hMg-OK-Kbb" secondAttribute="leading" id="Vit-Sc-blI"/>
                             <constraint firstItem="hMg-OK-Kbb" firstAttribute="top" secondItem="PCb-cp-Zfj" secondAttribute="bottom" constant="8" id="WT5-Vy-LXV"/>
+                            <constraint firstItem="hMg-OK-Kbb" firstAttribute="centerX" secondItem="PCb-cp-Zfj" secondAttribute="centerX" id="XVS-Ue-baU"/>
                             <constraint firstItem="PCb-cp-Zfj" firstAttribute="leading" secondItem="HZT-iv-JVJ" secondAttribute="trailing" constant="5" id="Y5M-Xc-Mlg"/>
                             <constraint firstItem="r48-0b-ztt" firstAttribute="baseline" secondItem="hMg-OK-Kbb" secondAttribute="baseline" id="YKE-JL-GsI"/>
                             <constraint firstItem="8f7-vd-o9L" firstAttribute="trailing" secondItem="hMg-OK-Kbb" secondAttribute="trailing" id="a1q-AD-TCe"/>
@@ -79,6 +83,7 @@
                             <constraint firstItem="8f7-vd-o9L" firstAttribute="top" secondItem="hMg-OK-Kbb" secondAttribute="bottom" constant="7" id="gtM-ea-cS8"/>
                             <constraint firstItem="r48-0b-ztt" firstAttribute="top" secondItem="hMg-OK-Kbb" secondAttribute="top" id="jlw-W0-JxN"/>
                             <constraint firstItem="cQ8-nQ-cHQ" firstAttribute="bottom" secondItem="WWJ-fs-sIf" secondAttribute="bottomMargin" id="l2v-E8-JPH"/>
+                            <constraint firstItem="HZT-iv-JVJ" firstAttribute="centerX" secondItem="r48-0b-ztt" secondAttribute="centerX" id="ln8-if-Hl1"/>
                             <constraint firstItem="PCb-cp-Zfj" firstAttribute="leading" secondItem="hMg-OK-Kbb" secondAttribute="leading" id="oab-Xj-8Cj"/>
                             <constraint firstAttribute="trailing" secondItem="PCb-cp-Zfj" secondAttribute="trailing" id="qdV-BO-s6f"/>
                             <constraint firstItem="r48-0b-ztt" firstAttribute="top" secondItem="HZT-iv-JVJ" secondAttribute="bottom" constant="8" id="rZc-5Y-XVX"/>
@@ -87,19 +92,21 @@
                             <constraint firstItem="hMg-OK-Kbb" firstAttribute="top" secondItem="PCb-cp-Zfj" secondAttribute="bottom" constant="8" id="tNn-tl-FBl"/>
                             <constraint firstItem="cQ8-nQ-cHQ" firstAttribute="leading" secondItem="r48-0b-ztt" secondAttribute="leading" id="tXH-jn-s5F"/>
                             <constraint firstItem="r48-0b-ztt" firstAttribute="top" secondItem="HZT-iv-JVJ" secondAttribute="bottom" constant="8" symbolic="YES" id="vh1-qJ-r4G"/>
+                            <constraint firstItem="8f7-vd-o9L" firstAttribute="centerY" secondItem="cQ8-nQ-cHQ" secondAttribute="centerY" id="vnk-hW-Tc2"/>
+                            <constraint firstItem="r48-0b-ztt" firstAttribute="centerX" secondItem="cQ8-nQ-cHQ" secondAttribute="centerX" id="wCl-k5-NKc"/>
                             <constraint firstItem="hMg-OK-Kbb" firstAttribute="trailing" secondItem="PCb-cp-Zfj" secondAttribute="trailing" id="we0-wD-KJM"/>
                             <constraint firstItem="8f7-vd-o9L" firstAttribute="top" secondItem="PCb-cp-Zfj" secondAttribute="bottom" constant="42" id="xve-CN-kFw"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMg-Wo-VfZ">
-                        <rect key="frame" x="8" y="8" width="351" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMg-Wo-VfZ">
+                        <rect key="frame" x="8" y="8" width="351" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="oPx-Hs-Xfb"/>
+                            <constraint firstAttribute="height" constant="40" id="oPx-Hs-Xfb"/>
                             <constraint firstAttribute="height" constant="25" id="p3a-AU-xbw"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="xXj-gk-Gpq"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="default">
                             <mask key="constraints">
@@ -113,18 +120,19 @@
                     <constraint firstAttribute="trailingMargin" secondItem="8f7-vd-o9L" secondAttribute="trailing" constant="-1" id="3PU-3R-01t"/>
                     <constraint firstAttribute="trailingMargin" secondItem="hMg-OK-Kbb" secondAttribute="trailing" constant="-1" id="5f2-QP-uxR"/>
                     <constraint firstAttribute="trailingMargin" secondItem="PCb-cp-Zfj" secondAttribute="trailing" constant="-1" id="EH0-ot-B60"/>
-                    <constraint firstItem="WWJ-fs-sIf" firstAttribute="top" secondItem="dMg-Wo-VfZ" secondAttribute="bottom" constant="8" symbolic="YES" id="FZ9-Ug-0mv"/>
+                    <constraint firstItem="WWJ-fs-sIf" firstAttribute="top" secondItem="dMg-Wo-VfZ" secondAttribute="bottom" constant="-11" id="FZ9-Ug-0mv"/>
                     <constraint firstAttribute="trailingMargin" secondItem="8f7-vd-o9L" secondAttribute="trailing" constant="-1" id="GYR-Hs-hN6"/>
                     <constraint firstAttribute="leadingMargin" secondItem="dMg-Wo-VfZ" secondAttribute="leading" id="K3L-5U-W9g"/>
                     <constraint firstAttribute="topMargin" secondItem="dMg-Wo-VfZ" secondAttribute="top" id="R4a-LJ-lU3"/>
                     <constraint firstItem="cQ8-nQ-cHQ" firstAttribute="leading" secondItem="gPF-Dy-PBD" secondAttribute="leadingMargin" constant="8" id="UT6-QN-lWV"/>
                     <constraint firstItem="WWJ-fs-sIf" firstAttribute="leading" secondItem="dMg-Wo-VfZ" secondAttribute="leading" id="aQS-og-RtH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dMg-Wo-VfZ" secondAttribute="trailing" constant="-1" id="can-c3-axn"/>
                     <constraint firstItem="r48-0b-ztt" firstAttribute="leading" secondItem="gPF-Dy-PBD" secondAttribute="leadingMargin" constant="8" id="g1F-TB-gCI"/>
                     <constraint firstItem="HZT-iv-JVJ" firstAttribute="leading" secondItem="gPF-Dy-PBD" secondAttribute="leadingMargin" constant="8" id="pDF-zg-qdm"/>
                     <constraint firstItem="dMg-Wo-VfZ" firstAttribute="top" secondItem="gPF-Dy-PBD" secondAttribute="topMargin" id="qTF-93-zSB"/>
                     <constraint firstItem="dMg-Wo-VfZ" firstAttribute="leading" secondItem="gPF-Dy-PBD" secondAttribute="leadingMargin" id="xXg-eh-2gj"/>
                     <constraint firstItem="WWJ-fs-sIf" firstAttribute="trailing" secondItem="dMg-Wo-VfZ" secondAttribute="trailing" id="yQD-zu-Xax"/>
-                    <constraint firstItem="PCb-cp-Zfj" firstAttribute="top" secondItem="dMg-Wo-VfZ" secondAttribute="bottom" constant="16" id="ysF-cn-sZY"/>
+                    <constraint firstItem="PCb-cp-Zfj" firstAttribute="top" secondItem="dMg-Wo-VfZ" secondAttribute="bottom" constant="-3" id="ysF-cn-sZY"/>
                     <constraint firstItem="r48-0b-ztt" firstAttribute="leading" secondItem="gPF-Dy-PBD" secondAttribute="leadingMargin" constant="8" id="zUR-bi-55H"/>
                 </constraints>
                 <variation key="default">

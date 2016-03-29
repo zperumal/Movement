@@ -22,7 +22,6 @@
 		616FF3301BE953A40057FD01 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616FF32F1BE953A40057FD01 /* SignupViewController.swift */; };
 		619D96611BEA8BFA009CD08B /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619D965F1BEA8BFA009CD08B /* Fabric.framework */; };
 		619D96621BEA8BFA009CD08B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619D96601BEA8BFA009CD08B /* Crashlytics.framework */; };
-		61D73D191C42F201004FD640 /* HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D73D181C42F201004FD640 /* HealthKit.swift */; };
 		814C3ACA1B69877600E307BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
 		814C3ACB1B69877600E307BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC81B69877600E307BB /* Images.xcassets */; };
 		81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814A1A49DA1800E65899 /* AppDelegate.swift */; };
@@ -53,7 +52,6 @@
 		616FF32F1BE953A40057FD01 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		619D965F1BEA8BFA009CD08B /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		619D96601BEA8BFA009CD08B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		61D73D181C42F201004FD640 /* HealthKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKit.swift; sourceTree = "<group>"; };
 		814C3AC71B69877600E307BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		814C3AC81B69877600E307BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 		5DDB1BD01C31DEA900D23682 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				61D73D181C42F201004FD640 /* HealthKit.swift */,
 				5DDB1BD31C31F5AD00D23682 /* HealthKitManager.swift */,
 				5DDB1BD51C338AEC00D23682 /* DateManager.swift */,
 			);
@@ -379,7 +376,6 @@
 			files = (
 				616FF3301BE953A40057FD01 /* SignupViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* LogInViewController.swift in Sources */,
-				61D73D191C42F201004FD640 /* HealthKit.swift in Sources */,
 				612C00731BF3E18500583AB2 /* QuestionViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 				614375D91BEA5EBB0083500E /* HomeViewController.swift in Sources */,

@@ -106,34 +106,4 @@ class SignupViewController: UIViewController {
                 
             })
         }
-    }
-    /*
-    func parseLogin(username : String, password : String ){
-        // Run a spinner to show a task in progress
-        let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
-        spinner.startAnimating()
-        
-        // Send a request to login
-        PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
-            
-            // Stop the spinner
-            spinner.stopAnimating()
-            
-            if ((user) != nil) {
-                //let alert = UIAlertView(title: "Success", message: "Logged In", delegate: self, cancelButtonTitle: "OK")
-                //alert.show()
-                /*
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    
-                    self.performSegueWithIdentifier("toHome", sender: self)
-                })
-                
-                */
-            } else {
-                let alert = UIAlertView(title: "Error in login", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
-                alert.show()
-            }
-        })
-    }
-    */
-}
+    }}

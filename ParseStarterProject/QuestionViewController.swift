@@ -71,14 +71,13 @@ class ButtonQuestionTableViewCell : UITableViewCell {
         questionLabel.lineBreakMode =  NSLineBreakMode.ByWordWrapping
         questionLabel.numberOfLines = 2
         questionLabel.sizeToFit()
+        for j in 0...buttons.count-1 {
+            buttons[j].setTitle("       ", forState: UIControlState.Normal)
+        }
         for i in 0...buttonText.count-1 {
             buttons[i].setTitle(buttonText[i], forState: UIControlState.Normal)
             buttons[i].tag = i + (100 * cell)
-        }
-        for j in buttonText.count-1...buttons.count-2 { //don't hide skip button
-           // buttons[j].removeFromSuperview()
-            buttons[j].hidden = true
-            buttons[j].enabled = false
+            buttons[i].enabled = true
         }
         skipButton.enabled = true
         skipButton.hidden = false
@@ -166,7 +165,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         response["questionText"] = question.questionText
         response["responseText"] = responseText
-        response["user"] = PFUser.object()
+        response["user"] = PFUser.currentUser()
         response.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {

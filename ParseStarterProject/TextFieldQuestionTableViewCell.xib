@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -15,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozb-JG-oVa">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozb-JG-oVa">
                         <rect key="frame" x="8" y="161" width="49" height="30"/>
                         <state key="normal" title="Submit"/>
                     </button>
@@ -26,8 +26,8 @@
                             <constraint firstAttribute="height" constant="38" id="ThS-sU-FiT"/>
                             <constraint firstAttribute="height" constant="25" id="s2Q-H6-cIo"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                         <variation key="default">
                             <mask key="constraints">
@@ -36,7 +36,7 @@
                             </mask>
                         </variation>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Tr-9C-pUM">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9Tr-9C-pUM">
                         <rect key="frame" x="8" y="54" width="351" height="108"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
@@ -52,12 +52,18 @@
                 <constraints>
                     <constraint firstItem="miT-6u-hat" firstAttribute="top" secondItem="NtC-9y-auH" secondAttribute="topMargin" id="3lO-nl-JTX"/>
                     <constraint firstItem="miT-6u-hat" firstAttribute="leading" secondItem="NtC-9y-auH" secondAttribute="leadingMargin" id="43L-w1-aXc"/>
+                    <constraint firstItem="9Tr-9C-pUM" firstAttribute="trailing" secondItem="miT-6u-hat" secondAttribute="trailing" id="4zf-hV-YGg"/>
+                    <constraint firstItem="9Tr-9C-pUM" firstAttribute="top" secondItem="miT-6u-hat" secondAttribute="bottom" constant="8" symbolic="YES" id="H8K-FS-9Lc"/>
                     <constraint firstItem="miT-6u-hat" firstAttribute="centerX" secondItem="NtC-9y-auH" secondAttribute="centerX" constant="-4" id="PxM-sh-RoU"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="9Tr-9C-pUM" secondAttribute="bottom" constant="29.5" id="ReK-Lh-Zjw"/>
                     <constraint firstAttribute="bottomMargin" secondItem="LuL-s3-ulz" secondAttribute="bottom" constant="0.5" id="Vku-HU-07m"/>
                     <constraint firstItem="miT-6u-hat" firstAttribute="trailing" secondItem="NtC-9y-auH" secondAttribute="trailingMargin" constant="-8" id="Xni-eR-1ok"/>
+                    <constraint firstItem="Ozb-JG-oVa" firstAttribute="baseline" secondItem="LuL-s3-ulz" secondAttribute="baseline" id="hKc-zr-YcQ"/>
+                    <constraint firstItem="Ozb-JG-oVa" firstAttribute="leading" secondItem="9Tr-9C-pUM" secondAttribute="leading" id="jDv-qf-AWJ"/>
                     <constraint firstItem="miT-6u-hat" firstAttribute="leading" secondItem="NtC-9y-auH" secondAttribute="leadingMargin" id="ptp-pX-R3A"/>
                     <constraint firstItem="miT-6u-hat" firstAttribute="top" secondItem="NtC-9y-auH" secondAttribute="topMargin" id="qda-B9-KaV"/>
                     <constraint firstAttribute="trailingMargin" secondItem="LuL-s3-ulz" secondAttribute="trailing" constant="16" id="ucD-WY-qeA"/>
+                    <constraint firstItem="9Tr-9C-pUM" firstAttribute="leading" secondItem="miT-6u-hat" secondAttribute="leading" id="x5b-Rr-bGv"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">

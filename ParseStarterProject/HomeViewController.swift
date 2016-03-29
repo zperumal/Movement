@@ -21,13 +21,18 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confirmpassword: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
+    var question :Question?
     let healthkitManager = HealthKitManager()
     let parseManager = ParseManager()
     var namesandscores :[String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         getNamesAndScores()
+        getQuestions( {error in
+            if error != nil{
+                print(error)
+            }
+        })
         // Do any additional setup after loading the view, typically from a nib.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         
@@ -52,8 +57,13 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         view.endEditing(true)
     }
     @IBAction func sync(){
-            sendData.enabled = false
-            syncData()
+        sendData.enabled = false
+        syncData()
+        
+        //self.backgroundThread(0.0, background: {
+          //  self.manageQuestionPopup()})
+            manageQuestionPopup()
+            //questionPopup()
     }
     func syncData(){
         healthkitManager.authorizeHealthKit { (authorized,  error) -> Void in
@@ -69,7 +79,7 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
                             print(records.count)
                             
                             PFUser.currentUser()?.setValue(NSDate(), forKey: "sycnedTo")
-                            self.syncCompleted()
+                           // self.syncCompleted()
                             
                             
                         }
@@ -88,6 +98,7 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         
         
         PFUser.currentUser()!.incrementKey("posts" )
+        PFUser.currentUser()?.saveInBackground()
         setPostLabel()
         getNamesAndScores()
     }
@@ -155,9 +166,10 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
                     break
                 }
                 let score = s as! NSDictionary
-                let name :String = String(score["username"]!)
+                var name :String = String(score["username"]!)
+                name = name.stringByPaddingToLength(15, withString: " ", startingAtIndex: 0)
                 if let post = score[scoreField] {
-                    self.namesandscores += [name + "     " + String(post)]
+                    self.namesandscores += [name + "\t\t\t\t" + String(post)]
                 }else{
                     
                     self.namesandscores += [name]
@@ -213,6 +225,113 @@ class HomeViewController:  UIViewController, UITableViewDelegate, UITableViewDat
             
         })
 
+    }
+    func getQuestions(completion: ( NSError?) -> ()){
+        let query  = PFQuery(className:"Question")
+        query.whereKey("active", equalTo: true)
+        query.whereKey("pushQuestion", equalTo: true)
+        var lastQuestion =  PFUser.currentUser()!.valueForKey("lastQuestion")
+        if lastQuestion == nil {
+            lastQuestion = 0
+        }
+        query.findObjectsInBackgroundWithBlock {
+            (objects:[PFObject]?, error:NSError?) -> Void in
+            if error == nil {
+                // The find succeeded.
+                // Do something with the found objects
+                if let objects = objects {
+                    let object = objects[0]
+                        
+                        let questionObj  = object.objectForKey("Question")
+                        if questionObj != nil {
+                            let question = questionObj as! String
+                            var answerKeys = ["AnswerA","AnswerB","AnswerC","AnswerD","AnswerE"]
+                            var answers : [String] = []
+                            
+                            for a in answerKeys {
+                                //var answer = object[a] as! String
+                                var answerobj  = object.objectForKey(a)
+                                if answerobj != nil {
+                                    var answer : String = answerobj as! String
+                                    if answer != "" {
+                                        answers += [answer]
+                                    }
+                                }
+                                
+                            }
+                            self.question =  Question(questionText : question, buttons: answers)
+                        }
+                    
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
+    }
+
+    func manageQuestionPopup(){
+        if question != nil {
+           showQuestionPopup()
+        }else{
+            getQuestions( { error in
+                if error != nil {
+                    print("\(error)")
+                }
+                else{
+                    self.showQuestionPopup()
+                }
+                
+            })
+        }
+    }
+    func showQuestionPopup(){
+        var alert = UIAlertController(title: (question?.questionText)!, message: "", preferredStyle: .Alert)
+        var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+            UIAlertAction in
+            NSLog("Cancel Pressed")
+        }
+        for answer in (question?.buttons)!{
+            var buttonAction = UIAlertAction(title: answer, style: UIAlertActionStyle.Default) {
+                UIAlertAction in
+                var response = PFObject(className:"Response")
+                response["questionText"] = (self.question?.questionText)!
+                response["responseText"] = answer
+                response["user"] = PFUser.currentUser()
+                 response.saveInBackgroundWithBlock   {
+                        (success: Bool, error: NSError?) -> Void in
+                        if (success) {
+                            print("Object Saved")
+                        } else {
+                            print("ERROR: save error")
+                        }
+                }
+            }
+            alert.addAction(buttonAction)
+        }
+        if question?.buttons.count == 0 {
+            alert.addTextFieldWithConfigurationHandler(nil)
+            
+            let submitAction = UIAlertAction(title: "Submit", style: .Default) { [unowned self, alert] (action: UIAlertAction!) in
+                let answer = alert.textFields![0].text!
+                var response = PFObject(className:"Response")
+                response["questionText"] = (self.question?.questionText)!
+                response["responseText"] = answer
+                response["user"] = PFUser.currentUser()
+                print(response["user"])
+                response.saveInBackgroundWithBlock   {
+                    (success: Bool, error: NSError?) -> Void in
+                    if (success) {
+                        print("Object Saved")
+                    } else {
+                        print("ERROR: save error")
+                    }
+                }
+            }
+            alert.addAction(submitAction)
+        }
+        alert.addAction(cancelAction)
+       presentViewController(alert, animated: true, completion: nil)
     }
 
 }

@@ -8,25 +8,26 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Movement.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>RateLimit.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9082B791313D7B5C81F671DB73FA4CB5</key>
+		<key>6FDEB1B62CBE8F1985DF1204A3922F1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -36,12 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B62DCA9470CFEAAD56E18AADE4C70370</key>
+		<key>98B598D78985860A9143B1D0F6EB5B75</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C3B5226B466225EFC73053AA33179A04</key>
+		<key>E82421CBEE4F9A6C8D5D9FEC459CE24A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

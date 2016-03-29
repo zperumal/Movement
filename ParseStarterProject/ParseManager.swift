@@ -24,8 +24,8 @@ class ParseManager : NSObject
        let ra = HealthKitManager.healthRecord.jsonArray(records)
        //print(ra)
         let data : NSData = ra.dataUsingEncoding( NSUTF8StringEncoding)!
-        
         let objectToSave = PFObject(className:"toBeSaved")
+        objectToSave["User"] = PFUser.currentUser()
         objectToSave["ObjectsToBeSaved"] = PFFile(data:data)
         objectToSave.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in

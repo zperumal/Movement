@@ -51,118 +51,122 @@ class HealthKitManager : NSObject
     func getRecords() -> [healthRecord] {
         return records
     }
-
     func fillRecords(completion: ( NSError?) -> ()){
-        func operationDone( _: NSError?) -> (){
-            self.remainingOps = self.remainingOps - 1
-        }
+        
+        
         let syncedTo  = PFUser.currentUser()!.valueForKey("syncedTo")
         let now = dateManager.getDateHourRoudnedDown(NSDate())
         var beginning : NSDate
         if syncedTo == nil {
-            //beginning = NSDate(dateString:"2014-08-01")
             beginning = NSDate(dateString:"2014-08-01")
         }else{
             beginning = syncedTo as! NSDate
         }
-        let hoursback = dateManager.hoursBack(now,past:  beginning)
-        remainingOps = hoursback * 3
-        for i in 0..<hoursback
-        {
-            //var op = NSBlockOperation( block: {
-                //print("Healthkit hours:" + String(i))
-                let startDate = self.dateManager.getDateRoundedPlusHours(now ,hours:  0 - i)
-                let endDate = self.dateManager.getDateRoundedPlusHours(now, hours: 1-i)
-                self.fillArray(startDate!, endDate: endDate!, recordType: RecordType.Step, completion : operationDone)
-                self.fillArray(startDate!, endDate: endDate!, recordType: RecordType.Distance, completion : operationDone)
-                self.fillArray(startDate!, endDate: endDate!, recordType: RecordType.Flight, completion : operationDone)
-           // }
-           //) queue.addOperation( op )
-        }
         
-        queue.suspended = false
-        queue.waitUntilAllOperationsAreFinished()
+        let interval = NSDateComponents()
+        interval.hour = 1
         
-        print("done!")
-        completion(nil)
-    }
-    
-    func fillArray(startDate : NSDate, endDate :NSDate, recordType : RecordType , completion: ( NSError?) -> ()){
-        var type : HKQuantityType
-        var className : String
-        var unit : HKUnit?
-        switch recordType {
-        case RecordType.Step:
-            type = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)!
-            className = "Step"
-            unit = HKUnit.countUnit()
-            break
-        case RecordType.Distance:
-            type = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDistanceWalkingRunning)!
-            className = "Distance"
-            unit = HKUnit.mileUnit()
-            break
-        case RecordType.Flight:
-            type = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierFlightsClimbed)!
-            className = "Flight"
-            unit = HKUnit.countUnit()
-            break
-        case RecordType.None:
-            return
-        default:
-            return
-        }
+        let types = [HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount) , HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierDistanceWalkingRunning), HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierFlightsClimbed)]
+        let units = [HKUnit.countUnit() , HKUnit.mileUnit(), HKUnit.countUnit()]
+        let classes  = ["Step" , "Distance" , "Flight"]
+        var leftToComplete = classes.count
         
-        let predicate = HKQuery.predicateForSamplesWithStartDate(startDate , endDate: endDate, options: .None)
-        
-        // The actual HealthKit Query which will fetch all of the steps and sum them up for us.
-        let query = HKSampleQuery(sampleType: type, predicate: predicate, limit: 0, sortDescriptors: nil) { query, results, error in
-            var count: Double = 0
+        //let type = HKSampleType.quantityTypeForIdentifier(HKQuantityTypeIdentifierStepCount)
+        for i in 0...types.count-1 {
+            let type  : HKQuantityType = types[i]!
+            let unit : HKUnit? = units[i]
+            let className : String = classes[i]
+            let predicate = HKQuery.predicateForSamplesWithStartDate(beginning, endDate: now, options: .StrictStartDate)
+            let query = HKStatisticsCollectionQuery(quantityType: type, quantitySamplePredicate: predicate, options: [.CumulativeSum], anchorDate: NSDate().beginningOfDay(), intervalComponents:interval)
             
-            if results?.count > 0
-            {
-                for result in results as! [HKQuantitySample]
-                {
-                    /*
+            query.initialResultsHandler = { query, results, error in
+                
+                
+                if let myResults = results{
                     
-                    */
-                    count += result.quantity.doubleValueForUnit(unit!)
+                    let hoursback = self.dateManager.hoursBack(now,past:  beginning)
+                    for i in 0..<hoursback
+                    {
+                        let startDate = self.dateManager.getDateRoundedPlusHours(now ,hours:  0 - i)
+                        let endDate = self.dateManager.getDateRoundedPlusHours(now, hours: 1-i)
+                        myResults.enumerateStatisticsFromDate(startDate!, toDate: endDate!) {
+                            statistics, stop in
+                            
+                            if let quantity = statistics.sumQuantity() {
+                                
+                                let date = statistics.startDate
+                                let count = quantity.doubleValueForUnit(unit!)
+                                self.records += [healthRecord(sampleType: className, startDate: startDate!, endDate: endDate!, quantity: count)]
+                                
+                            }
+                        }
+                    }
+                    
+                    
+                }
+                leftToComplete = leftToComplete - 1
+                if leftToComplete == 0 {
+                    
+                    completion(nil)
                 }
             }
-            
-            
-            completion( error)
-            if count > 0 {
-                /*let record = PFObject(className:className)
-                record["sampleType"] = className
-                record["startDate"] = startDate
-                record["endDate"] = endDate
-                record["quantity"] = count
-                record["User"] = PFUser.currentUser()
-                */
-                self.records += [healthRecord(sampleType: className, startDate: startDate, endDate: endDate, quantity: count, user:  PFUser.currentUser()!)]
-            }
+            self.storage.executeQuery(query)
         }
-        var op = NSBlockOperation( block: {
-        self.storage.executeQuery(query)
-        })
-        queue.addOperation( op )
+        
     }
-
     struct healthRecord {
         var sampleType = String();
         var startDate = NSDate();
         var endDate = NSDate();
         var quantity = Double();
-        var user = PFUser();
         static func jsonArray(array : [healthRecord]) -> String
         {
             return "[" + array.map {$0.jsonRepresentation}.joinWithSeparator(",") + "]"
         }
         var jsonRepresentation : String {
-            return "{\"sampleType\":\"\(sampleType)\",\"startDate\":\"\(startDate)\",\"endDate\":\"\(endDate)\",\"quantity\":\"\(quantity)\",\"user\":\"\(user)\"}"
+            return "{\"sampleType\":\"\(sampleType)\",\"startDate\":\"\(startDate)\",\"endDate\":\"\(endDate)\",\"quantity\":\"\(quantity)\"}"
         }
     
     }
     
+}
+
+extension NSDate {
+    convenience
+    init(dateString:String) {
+        let dateStringFormatter = NSDateFormatter()
+        dateStringFormatter.dateFormat = "yyyy-MM-dd"
+        dateStringFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        let d = dateStringFormatter.dateFromString(dateString)!
+        self.init(timeInterval:0, sinceDate:d)
+    }
+    func beginningOfDay() -> NSDate {
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Year, .Month, .Day], fromDate: self)
+        return calendar.dateFromComponents(components)!
+    }
+    
+    func endOfDay() -> NSDate {
+        let components = NSDateComponents()
+        components.day = 1
+        var date = NSCalendar.currentCalendar().dateByAddingComponents(components, toDate: self.beginningOfDay(), options: [])!
+        date = date.dateByAddingTimeInterval(-1)
+        return date
+    }
+}
+func yesterDay() -> NSDate {
+    
+    let today: NSDate = NSDate()
+    
+    let daysToAdd:Int = -1
+    
+    // Set up date components
+    let dateComponents: NSDateComponents = NSDateComponents()
+    dateComponents.day = daysToAdd
+    
+    // Create a calendar
+    let gregorianCalendar: NSCalendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)!
+    let yesterDayDate: NSDate = gregorianCalendar.dateByAddingComponents(dateComponents, toDate: today, options:NSCalendarOptions(rawValue: 0))!
+    
+    return yesterDayDate
 }
